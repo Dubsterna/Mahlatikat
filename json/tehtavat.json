@@ -1,0 +1,60 @@
+{
+    "tehtavat":
+    [
+        {
+            "projekti": "Web-ohjelmointi",
+            "tehtava": "Kirjautumislomake",
+            "kuvaus": "Tee pohja kirjautumislomakkeelle",
+            "vaihe": "Toteutusvaihe",
+            "suunnitellut resurssit": "2",
+            "kaytetyt resurssit": "3",
+            "valmiusaste": "60",
+            "tekijat":  "Maija"
+        },
+        
+        {
+            "projekti": "Web-palvelun suunnittelu ja määrittely",
+            "tehtava": "Projektisuunnitelma",
+            "kuvaus": "Tee versionhallinta alkuun",
+            "vaihe": "Suunniteluvaihe",
+            "suunnitellut resurssit": "1",
+            "kaytetyt resurssit": "2",
+            "valmiusaste": "60",
+            "tekijat":  "Esa"
+        },
+        
+        {
+            "projekti": "Web-projekti 1",
+            "tehtava": "Muistipelipohja",
+            "kuvaus": "Tee pohja muistipelille",
+            "vaihe": "Toteutusvaihe",
+            "suunnitellut resurssit": "2",
+            "kaytetyt resurssit": "1",
+            "valmiusaste": "40",
+            "tekijat":  "Onni"
+        },
+        
+        {
+            "projekti": "Web-projekti 2",
+            "tehtava": "Tallenna painikkeen ohjelmointi",
+            "kuvaus": "Ohjelmoi painike toimimaan klikkauksella",
+            "vaihe": "Toteutusvaihe",
+            "suunnitellut resurssit": "2",
+            "kaytetyt resurssit": "2",
+            "valmiusaste": "60",
+            "tekijat":  "Mikko"
+        },
+        
+        {
+            "projekti": "Oma-projekti 1",
+            "tehtava": "Hanki googleavain",
+            "kuvaus": "Hanki googlen avain karttapalvelujen käyttämiseksi",
+            "vaihe": "Toteutusvaihe",
+            "suunnitellut resurssit": "1",
+            "kaytetyt resurssit": "2",
+            "valmiusaste": "20",
+            "tekijat":  "Tuula"
+        }
+        
+    ]
+}

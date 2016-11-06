@@ -1,0 +1,75 @@
+{
+    "muistiinpano":
+    [
+        {
+            "projekti": "Web-ohjelmointi",
+            "otsikko": "Tapaaminen",
+            "kuvaus": "Muista palaveri 12.12 klo 12",
+            "jaetaan": "Maija, Pekka"
+        },
+        
+        {
+            "projekti": "Web-palvelun suunnittelu ja määrittely",
+            "otsikko": "Use Case -kaavio",
+            "kuvaus": "Muista lisätä Use Case kaavioon uusi toiminto ryhmäadminille",
+            "jaetaan": "Pekka"
+        },
+        
+        {
+            "projekti": "Web-ohjelmointi",
+            "otsikko": "Tutustu työkaluun",
+            "kuvaus": "Opettele käyttämään kotona NinjaMock työkalua rautalankamallien tekemiseen",
+            "jaetaan": "Maija, Pekka, Matti, Esa"
+        },
+        
+        {
+            "projekti": "Web-projekti 1",
+            "otsikko": "Ehdota ideaasi",
+            "kuvaus": "Informoi ryhmän muita jäseniä huikeasta ideastasi",
+            "jaetaan": "-"
+        },
+        
+        {
+            "projekti": "Web-projekti 2",
+            "otsikko": "Määrittelyvaiheen deadline 9.11 ",
+            "kuvaus": "Tarkasta dokumentaatio",
+            "jaetaan": "Mika, Anni, Matti, Esa"
+        },
+        
+                {
+            "projekti": "Web-ohjelmointi",
+            "otsikko": "Tapaaminen",
+            "kuvaus": "Muista palaveri 12.12 klo 12",
+            "jaetaan": "Maija, Pekka"
+        },
+        
+        {
+            "projekti": "Web-palvelun suunnittelu ja määrittely",
+            "otsikko": "Use Case -kaavio",
+            "kuvaus": "Muista lisätä Use Case kaavioon uusi toiminto ryhmäadminille",
+            "jaetaan": "Pekka"
+        },
+        
+        {
+            "projekti": "Web-ohjelmointi",
+            "otsikko": "Tutustu työkaluun",
+            "kuvaus": "Opettele käyttämään kotona NinjaMock työkalua rautalankamallien tekemiseen",
+            "jaetaan": "Maija, Pekka, Matti, Esa"
+        },
+        
+        {
+            "projekti": "Web-projekti 1",
+            "otsikko": "Ehdota ideaasi",
+            "kuvaus": "Informoi ryhmän muita jäseniä huikeasta ideastasi",
+            "jaetaan": "-"
+        },
+        
+        {
+            "projekti": "Web-projekti 2",
+            "otsikko": "Määrittelyvaiheen deadline 9.11 ",
+            "kuvaus": "Tarkasta dokumentaatio",
+            "jaetaan": "Mika, Anni, Matti, Esa"
+        }
+        
+    ]
+}
