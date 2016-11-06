@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Oma sivu</title>
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link href="omasivu.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+    var Header = React.createClass({
+       render: function() {
+           return (
+                <div id="header">
+                    <h1>Header-element</h1>
+                    <div id="userDropdown"></div>
+                    <div id="notificationsDropdown"></div>
+                </div>
+           );
+       } 
+    });
+
+    var TodoList = React.createClass({
+       render: function() {
+           return (
+                <div id="todoList">
+                    <h1>Tehtäväsi</h1>
+                    <div id="todo"></div>
+                </div>
+           );
+       } 
+    });
+
+    var NoteList = React.createClass({
+       render: function() {
+           return (
+                <div id="noteList">
+                    <h1>Muistiinpanot</h1>
+                    <div id="note"></div>
+                </div>
+           );
+       } 
+    });
+    
+    var ProjectList = React.createClass({
+       render: function() {
+           return (
+                <div id="projectList">
+                    <h1>Projektit</h1>
+                    <div id="project"></div>
+                </div>
+           );
+       } 
+    });
+
+    var App = React.createClass({
+        render: function() {
+            return (
+            <div>
+                <Header />
+                <ProjectList />
+                <NoteList />
+                <TodoList />
+            </div>
+            );
+        }
+    });
+
+
+      ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+      );
+
+    </script>
+  </body>
+</html>

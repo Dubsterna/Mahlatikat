@@ -1,0 +1,46 @@
+body {
+    width: 1280px;
+    margin: 0px auto;
+}
+
+#header {
+    display: block;
+    width: 1280px;
+    height: 100px;
+    background: #f9f9f9;
+    border: 1px solid #dadada;
+    margin: 0px auto;
+}
+
+#projectList {
+    display: inline-block;
+    width: 200px;
+    height: 500px;
+    background: #f9f9f9;
+    margin: 50px;
+    text-align: center;
+    border: 1px solid #dadada;
+    padding: 30px;
+}
+
+#todoList {
+    display: inline-block;
+    width: 200px;
+    height: 500px;
+    background: #f9f9f9;
+    margin: 50px;
+    text-align: center;
+    border: 1px solid #dadada;
+    padding: 30px;
+}
+
+#noteList {
+    display: inline-block;
+    width: 200px;
+    height: 500px;
+    background: #f9f9f9;
+    margin: 50px;
+    text-align: center;
+    border: 1px solid #dadada;
+    padding: 30px;
+}
