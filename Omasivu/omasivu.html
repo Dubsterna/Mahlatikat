@@ -1,81 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Oma sivu</title>
-    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
-    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-    <link href="omasivu.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Omasivu</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/omasivu.css" type="text/css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <div id="root"></div>
-    <script type="text/babel">
-
-    var Header = React.createClass({
-       render: function() {
-           return (
-                <div id="header">
-                    <h1>Header-element</h1>
-                    <div id="userDropdown"></div>
-                    <div id="notificationsDropdown"></div>
-                </div>
-           );
-       } 
-    });
-
-    var TodoList = React.createClass({
-       render: function() {
-           return (
-                <div id="todoList">
-                    <h1>Tehtäväsi</h1>
-                    <div id="todo"></div>
-                </div>
-           );
-       } 
-    });
-
-    var NoteList = React.createClass({
-       render: function() {
-           return (
-                <div id="noteList">
-                    <h1>Muistiinpanot</h1>
-                    <div id="note"></div>
-                </div>
-           );
-       } 
-    });
+      
+      <div class="page-header">
+        
+      </div>
     
-    var ProjectList = React.createClass({
-       render: function() {
-           return (
-                <div id="projectList">
-                    <h1>Projektit</h1>
-                    <div id="project"></div>
-                </div>
-           );
-       } 
-    });
+      <div class="container">
 
-    var App = React.createClass({
-        render: function() {
-            return (
-            <div>
-                <Header />
-                <ProjectList />
-                <NoteList />
-                <TodoList />
+        <div class="row">
+          <div class="col-sm-4">
+              <div class="project-block">
+                <h3>Projektit</h3>
+                  <ul class="list-unstyled">
+                      <li>
+                          <div class="panel-group accordion-holder" id="accordion" role="tablist" aria-multiselectable="true">
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                  <h4 class="panel-title"><a>Projekti</a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      <span class="glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                  </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                  <div class="panel-body">
+                                    <h4>Kuvaus:</h4>
+                                    <h4>Jäsenet:</h4>
+                                    <h4>Päällikkö:</h4>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                            </div>
+
+
+                      </li>
+                    <li><a href="#">  <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title"><a>Projekti</a>
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <span class="glyphicon glyphicon-menu-down"></span>
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                            <h4>Kuvaus:</h4>
+                            <h4>Jäsenet:</h4>
+                            <h4>Päällikkö:</h4>
+                          </div>
+                        </div>
+                      </div></a>
+                      </li>
+                        <li><a href="#">  <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                              <h4 class="panel-title"><a>Projekti</a>
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  <span class="glyphicon glyphicon-menu-down"></span>
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <h4>Kuvaus:</h4>
+                                    <h4>Jäsenet:</h4>
+                                    <h4>Päällikkö:</h4>
+                                  </div>
+                                </div>
+                              </div></a>
+                      </li>
+                  </ul>
+
+              </div>
+              
             </div>
-            );
-        }
-    });
+          <div class="col-sm-4">
+              <div class="note-block">
+              <h3>Viimeisimmät muistiinpanot</h3>
+              <ul class="list-unstyled">
+                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                  </ul>
+             </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="todo-block">
+                <h3>Sinulle annetut tehtävät</h3>
+                    <ul class="list-unstyled" class="col-sm-4">
+                    <li class="todo-form">
+                        <h4>Projektinimi</h4>
+                        <h4>Tehtävä 1</h4>
+                        <button type="button" class="btn btn-default">Lisää</button>
 
+                    </li>
+                    <li class="todo-form">
+                        <h4>Projektinimi</h4>
+                        <h4>Tehtävä 1</h4>
+                        <button type="button" class="btn btn-default">Lisää</button>
+                    </li>
+                    <li class="todo-form">
+                        <h4>Projektinimi</h4>
+                        <h4>Tehtävä 1</h4>
+                        <button type="button" class="btn btn-default">Lisää</button>
+                    </li>
+                    <li class="todo-form">
+                    <h4>Projektinimi</h4>
+                    <h4>Tehtävä 1</h4>
+                        <button type="button" class="btn btn-default">Lisää</button>
+                    </li>
+                  </ul>
+              </div>
+              
+          </div>
+            
+        </div>
+      </div>
 
-      ReactDOM.render(
-        <App />,
-        document.getElementById('root')
-      );
-
-    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
