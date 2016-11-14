@@ -20,10 +20,65 @@
   </head>
   <body>
       
+      <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Etusivu</a></li>
+            <li class="active"><a href="#">Omasivu <span class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projektit <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Projekti1</a></li>
+                <li><a href="#">Projekti2</a></li>
+                <li><a href="#">Projekti3</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Uusi projekti</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ilmoitukset <span class="caret"></span></a></li>
+              <ul class="dropdown-menu">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>  
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Käyttäjä <span class="caret"></span></a></li>
+            <ul class="dropdown-menu">
+                <li><a href="#">Omasivu</a></li>
+                <li><a href="#">Muokkaa profiilia</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Kirjaudu ulos</a></li>
+            </ul>
+            </ul>
+          </div>
+            
+      </div><!-- /.container-fluid -->
+    </nav>
+
+      
       <div class="page-header">
         
       </div>
-    
+    <div class="content-holder">
+      
       <div class="container">
 
         <div class="row">
@@ -98,14 +153,14 @@
               <div class="note-block">
               <h3>Viimeisimmät muistiinpanot</h3>
               <ul class="list-unstyled">
-                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
-                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
-                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
-                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
-                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
-                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
-                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
-                    <li><a href="#"> <textarea class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea disabled class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea disabled class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea disabled class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea disabled class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea disabled class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea disabled class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea disabled class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
+                    <li><a href="#"> <textarea disabled class="form-control" rows="5">Tähän tulee muistiinpano</textarea></a></li>
                   </ul>
              </div>
           </div>
@@ -113,27 +168,34 @@
               <div class="todo-block">
                 <h3>Sinulle annetut tehtävät</h3>
                     <ul class="list-unstyled" class="col-sm-4">
-                    <li class="todo-form">
+                    <div class="todo-body">
+                        <li class="todo-form">
+                            <h4>Projektinimi</h4>
+                            <h4>Tehtävä 1</h4>
+                        </li>
+                        <li class="todo-button-li"><button type="button" class="btn btn-default">Lisää</button></li>
+                    </div>
+                    <div class="todo-body">
+                        <li class="todo-form">
+                            <h4>Projektinimi</h4>
+                            <h4>Tehtävä 1</h4>
+                        </li>
+                        <li class="todo-button-li"><button type="button" class="btn btn-default">Lisää</button></li>
+                    </div>
+                    <div class="todo-body">
+                        <li class="todo-form">
+                            <h4>Projektinimi</h4>
+                            <h4>Tehtävä 1</h4>
+                        </li>
+                        <li class="todo-button-li"><button type="button" class="btn btn-default">Lisää</button></li>
+                    </div>
+                    <div class="todo-body">
+                        <li class="todo-form">
                         <h4>Projektinimi</h4>
                         <h4>Tehtävä 1</h4>
-                        <button type="button" class="btn btn-default">Lisää</button>
-
-                    </li>
-                    <li class="todo-form">
-                        <h4>Projektinimi</h4>
-                        <h4>Tehtävä 1</h4>
-                        <button type="button" class="btn btn-default">Lisää</button>
-                    </li>
-                    <li class="todo-form">
-                        <h4>Projektinimi</h4>
-                        <h4>Tehtävä 1</h4>
-                        <button type="button" class="btn btn-default">Lisää</button>
-                    </li>
-                    <li class="todo-form">
-                    <h4>Projektinimi</h4>
-                    <h4>Tehtävä 1</h4>
-                        <button type="button" class="btn btn-default">Lisää</button>
-                    </li>
+                        </li>
+                        <li class="todo-button-li"><button type="button" class="btn btn-default">Lisää</button></li>
+                    </div>
                   </ul>
               </div>
               
@@ -141,6 +203,7 @@
             
         </div>
       </div>
+        </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

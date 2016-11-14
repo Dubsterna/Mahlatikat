@@ -1,9 +1,24 @@
+.navbar-default {
+    background: #fff;
+    border-radius: 0px!important;
+}
+
+.content-holder {
+    margin-top: 100px;
+}
 .project-block {
     background: #f9f9f9;
     border: 1px solid #dadada;
     text-align: center;
     border-radius: 8px;
+    max-height: 600px;
+    min-height: 600px;
+    overflow-y: auto;
     
+}
+
+.project-block h3{
+    padding-bottom: 30px;
 }
 
 .note-block {
@@ -11,7 +26,9 @@
     border: 1px solid #dadada;
     text-align: center;
     border-radius: 8px;
-    max-height: 800px;
+    max-height: 600px;
+    min-height: 600px;
+    
     overflow-y: auto;
     
 }
@@ -23,11 +40,18 @@ textarea.form-control {
     margin: 40px;
 }
 
+.form-control[disabled] {
+    cursor: pointer;
+}
+
 .todo-block {
     background: #f9f9f9;
     border: 1px solid #dadada;
     text-align: center;
     border-radius: 8px;
+    overflow-y: auto;
+    max-height: 600px;
+    min-height: 600px;
     
 }
 
@@ -40,11 +64,23 @@ textarea.form-control {
     border-radius: 4px;
     padding: 10px;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
     
 }
 
+
 .todo-form .btn-default {
+    /*float: right;
+    margin-top: -50px;*/
+}
+
+.todo-button-li {
+    display: inline-block;
     float: right;
-    margin-top: -50px;
+    margin-right: 52px;
+    margin-top: 5px;
+}
+
+.todo-body {
+    padding-bottom: 40px;
 }
