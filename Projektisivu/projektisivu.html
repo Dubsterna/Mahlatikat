@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Projektisivu proto</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/proto-custom-styles.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Etusivu <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Omasivu</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projektit <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Projekti1</a></li>
+                <li><a href="#">Projekti2</a></li>
+                <li><a href="#">Projekti3</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Uusi projekti</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ilmoitukset <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+              </ul>
+            </li> 
+            
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Käyttäjä <span class="caret"></span></a></li>
+            <ul class="dropdown-menu">
+                <li><a href="#">Omasivu</a></li>
+                <li><a href="#">Muokkaa profiilia</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Kirjaudu ulos</a></li>
+            </ul>
+            </ul>
+            
+      </div>
+    </nav>
+    <div class="container">
+          <div class="col-sm-4">
+            <div class="notification-block">
+                <h1>Ilmoitustaulu</h1>
+                <ul class="list-unstyled">
+                    <li>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Äkkiäääää!!</h3>
+                            </div>
+                            <div class="panel-body">dfhgfdhhdgf</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Äkkiäääää!!</h3>
+                            </div>
+                            <div class="panel-body">dfhgfdhhdgf</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Äkkiäääää!!</h3>
+                            </div>
+                            <div class="panel-body">dfhgfdhhdgf</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Äkkiäääää!!</h3>
+                            </div>
+                            <div class="panel-body">dfhgfdhhdgf</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Äkkiäääää!!</h3>
+                            </div>
+                            <div class="panel-body">dfhgfdhhdgf</div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="projectname-block">
+                <h1>Projekti</h1>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="members-block">
+                <div class="panel panel-default" id="member">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Jäsenet</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li>jäsen 1</li>
+                            <li>jäsen 2</li>
+                            <li>jäsen 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+          </div>
+    <div class="container">
+          <div class="tabholder">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#vaihe1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">Vaihe 1</a></li>
+    <li role="presentation"><a href="#vaihe2" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 2</a></li>
+    <li role="presentation"><a href="#vaihe3" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 3</a></li>
+    <li role="presentation"><a href="#vaihe4" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 4</a></li>
+    <li><button id="tehtavaButton" class="btn btn-default">Uusi tehtävä</button></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="vaihe1"><table class="table table-bordered">
+        <thead>
+      <tr>
+        <th class="col-sm-3">Tehtävä</th>
+        <th class="col-sm-3">Selvitys</th>
+        <th class="col-sm-2">päivämäärä</th>
+        <th class="col-sm-2">Tekijä(t)</th>
+        <th class="col-sm-1">Valmiusaste</th>
+        <th class="col-sm-1">Tunnit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>dsfdsfs</td>
+        <td>sdf</td>
+        <td>sdfsd</td>
+        <td>asdas</td>
+        <td>70%</td>
+        <td class="text-right">3</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td colspan="4" class="noborders"></td>
+        <th class="text-right" scope="row">Yhteensä</th>
+        <td class="text-right">3</td>  
+      </tr>
+    </tbody>
+</table></div>
+    <div role="tabpanel" class="tab-pane" id="vaihe2"><table class="table table-bordered">
+        <thead>
+      <tr>
+        <th class="col-sm-3">Tehtävä</th>
+        <th class="col-sm-3">Selvitys</th>
+        <th class="col-sm-2">päivämäärä</th>
+        <th class="col-sm-2">Tekijä(t)</th>
+        <th class="col-sm-1">Valmiusaste</th>
+        <th class="col-sm-1">Tunnit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>kklöälälöä</td>
+        <td>klölök</td>
+        <td>opåop</td>
+        <td>ayuiyui</td>
+        <td>50%</td>
+        <td class="text-right">2</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td colspan="4" class="noborders"></td>
+        <th class="text-right" scope="row">Yhteensä</th>
+        <td class="text-right">2</td>
+      </tr>
+    </tbody>
+</table></div>
+    <div role="tabpanel" class="tab-pane" id="vaihe3"><table class="table table-bordered">
+        <thead>
+      <tr>
+        <th class="col-sm-3">Tehtävä</th>
+        <th class="col-sm-3">Selvitys</th>
+        <th class="col-sm-2">päivämäärä</th>
+        <th class="col-sm-2">Tekijä(t)</th>
+        <th class="col-sm-1">Valmiusaste</th>
+        <th class="col-sm-1">Tunnit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>werwer</td>
+        <td>bvnv</td>
+        <td>jkld</td>
+        <td>gs</td>
+        <td>10%</td>
+        <td class="text-right">1</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td colspan="4" class="noborders"></td>
+        <th class="text-right" scope="row">Yhteensä</th>
+        <td class="text-right">1</td>
+      </tr>
+    </tbody>
+</table></div>
+    <div role="tabpanel" class="tab-pane" id="vaihe4"><table class="table table-bordered">
+        <thead>
+      <tr>
+        <th class="col-sm-3">Tehtävä</th>
+        <th class="col-sm-3">Selvitys</th>
+        <th class="col-sm-2">päivämäärä</th>
+        <th class="col-sm-2">Tekijä(t)</th>
+        <th class="col-sm-1">Valmiusaste</th>
+        <th class="col-sm-1">Tunnit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>öpöpöp</td>
+        <td>uiuiuiui</td>
+        <td>wiiii</td>
+        <td>asdas</td>
+        <td>75%</td>
+        <td class="text-right">8</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"></td>
+      </tr>
+      <tr>
+        <td colspan="4" class="noborders"></td>
+        <th class="text-right" scope="row">Yhteensä</th>
+        <td class="text-right">8</td>
+      </tr>
+    </tbody>
+</table></div>
+  </div>
+
+</div>
+</div>
+      
+      </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
