@@ -84,3 +84,14 @@ textarea.form-control {
 .todo-body {
     padding-bottom: 40px;
 }
+
+.project-toggle {
+    position: static!important;
+    
+}
+
+.btn {
+    left: 0;
+    right: 0;
+    
+}
