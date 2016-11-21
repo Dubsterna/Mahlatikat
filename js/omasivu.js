@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    //$('[data-toggle="popover"]').popover();
+    
 
     // get projects
     $.ajax({
@@ -36,29 +36,51 @@ $(document).ready(function(){
 
 }); // end of document ready
 
-    $("#arrow").click(function(){
+    // panel headia ei pysty jostain syysta klikkaamaan ?!?!?!!?
+    /*$("span#arrow").click(function(){
         console.log("klikkaus toimii");
         $(this).next(".panelbody").toggle(200);
-    });
+    });*/
+
+   /* $('span#arrow').on('click', function () {
+        console.log("Vittusaatanaperkelehelvetti");
+    });*/
+
+    /*$(document).on('click', '#arrow', function(){
+        console.log("Toimii");
+        $(document).next(".panelbody").toggle(200);
+    });*/
+        
+    $(document).on('click','#arrow', function(){
+    $(this).toggleClass('glyphicon-menu-up');
+    $(this).toggleClass('glyphicon-menu-down');
+    // toimii kaikilla $(".panel-collapse").collapse('toggle');
+    $(this).closest(".panel-group").find(".panel-collapse").collapse('toggle');
+});
+
+    $('[data-toggle="popover"]').popover();
+
+    
+
 
 
 function showProjects(data) {
     $.each(data.projektit, function(index,projektit){
         console.log(showProjects);
         // add a project item to the project-list
+        
+        // tama tapa saa lisattya jsonit
         $("#project-list").append("<li>"+
                                       '<div class="panel-group accordion-holder" id="accordion" role="tablist" aria-multiselectable="true">'+
                                         '<div class="panel panel-default">'+
-                                            '<div class="panel-heading" role="tab" id="headingOne">'+
+                                            '<div class="panel-heading" role="tab" id="headingOne" class="accordion">'+
                                                 '<h4 class="panel-title">'+
-                                                "<a>"+projektit.projekti+ " " +
+                                                '<a class="project-title">'+projektit.projekti+ " " +
                                                 "</a>"+
-                                                    '<a data-toggle="collapse" data-parent="#accordion" data-target="collapseOne" aria-expanded="true" aria-controls="collapseOne" id="arrow">'+
-                                                        '<span class="glyphicon glyphicon-menu-down"></span>'+
-                                                    "</a>"+
+                                                '<span class="glyphicon glyphicon-menu-down" id="arrow"></span>'+
                                                 "</h4>"+
                                             "</div>"+
-                                      '<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">'+
+                                      '<div class="panel-collapse collapse" role="tabpanel">'+
                                         '<div class="panel-body">'+
                                             "<p>"+"Kuvaus: " + projektit.kuvaus + "</p>" +
                                             "<p>"+"Jäsenet: " + projektit.jasenet + "</p>"+
@@ -67,7 +89,33 @@ function showProjects(data) {
                                     "</div>"+
                                         "</div>"+
                                     "</div>"+
-                                "</li>");
+                                "</li>"); 
+        
+       /*  // create a new list item
+        var listItem = $("<li>");
+        
+        // create a new div for panelGroup
+        var panelGroup = $("<div>").addClass("panel-group accordion-holder").attr("id", "accordion").attr("role", "tablist").attr("aria-multiselectable", "true");
+        
+        // create a new panel
+         var panel = $("<div>").addClass("panel panel-default");
+        
+        // create a new panel heading
+        var panelHeading = $("<div>").addClass("panel-heading").attr("role", "tab").attr("id", "headingOne");
+        
+        // create a new header to project
+        var panelTitle = $("<h4>").addClass("panel-header");
+        
+        // create a new project title link
+        var projectTitleLink = $("<a>").addClass("project-title").text(projektit.projekti);
+       
+        // create a glyphicon arrow with link
+       var glyphicon = $("<a>").addClass("glyphicon glyphicon-menu-down").attr("data-toggle", "collapse").attr("data-parent","#accordion").attr("href", "collpaseOne").attr("aria-expanded","true").attr("aria-controls", "collapseOne");
+        
+       // create a collapse
+       
+       projectListItem.append(accordionHolder, projectDiv, projectHeadingDiv, projectHeader, collapseLink, menuArrow);
+       $("#project-list").append(projectListItem);*/
     })
 }
 
@@ -98,7 +146,7 @@ function showTodos(data) {
                                     '<li class="todo-button-li">' +
                                         '<button type="button" class="btn btn-default" dhref="#" data-toggle="popover" title="Resurssin lisäys" data-content="Kuinka kauan käytit tehtävän Projektisuunnitelma tekemiseen?">'+"Lisää"+
                                         "</button>"+
-                                        "</li>")
+                                        "</li>");
         
        
     })
