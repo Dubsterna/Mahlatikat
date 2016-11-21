@@ -4,7 +4,10 @@ body {
     
 }
 .navbar {
+    padding-top: 17px;
     margin-bottom: 10px;
+    height: 80px;
+    background-image: url("nav_kuva4.png");
 }
 
 .signin {
@@ -22,4 +25,13 @@ body {
 
 .teksti {
     margin-top: 50px
+}
+
+.logo {
+    height:40px;
+    width: inherit;
+}
+
+.footer {
+    height: 40px;
 }
