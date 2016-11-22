@@ -151,18 +151,20 @@ function showNotes(data) {
     })*/
     
     $.each(data.muistiinpanot, function(index, muistiinpanot) {
-        $("#note-list").append('<div class="note-body">'+
-                                    '<li class="note-header">'+
-                                        "<h4>" + muistiinpanot.otsikko + "</h4>"+
-                                    "</li>"+
-                                    '<li class="note-background">'+
-                                        "<p>"+muistiinpanot.kuvaus+ "</p>"+
-                                    "</li>"+
-                                    "<li>"+
-                                        "<p> Projekti: " + muistiinpanot.projekti+"</p>"+
-                                        "<p> Jaetaan: "+muistiinpanot.jaetaan+ "</p>"+
-                                    "</li>"+
-                                "</div>");
+            $("#note-list").append('<div class="note-item">'+
+                                    '<div class="note-body">'+
+                                        '<li class="note-header">'+
+                                            "<h4>" + muistiinpanot.otsikko + "</h4>"+
+                                        "</li>"+
+                                        '<li class="note-background">'+
+                                            "<p>"+muistiinpanot.kuvaus+ "</p>"+
+                                        "</li>"+
+                                        "<li>"+
+                                            "<p> Projekti: " + muistiinpanot.projekti+"</p>"+
+                                            "<p> Jaetaan: "+muistiinpanot.jaetaan+ "</p>"+
+                                        "</li>"+
+                                    "</div>"+
+                                  "</div");
     })
     
     /*<div class="note-body">

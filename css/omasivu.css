@@ -13,12 +13,11 @@
     border-radius: 8px;
     max-height: 600px;
     min-height: 600px;
-    overflow-y: auto;
     
 }
 
-.project-block h3{
-    padding-bottom: 30px;
+.project-block .block-header{
+    margin-bottom: 0px;
 }
 
 .note-block {
@@ -28,7 +27,6 @@
     border-radius: 8px;
     max-height: 600px;
     min-height: 600px;
-    overflow-y: auto;
     -webkit-transform: translate3d(0, 0, 0).
     
 }
@@ -81,7 +79,7 @@ textarea.form-control {
     margin: 0px auto;
     border-radius: 4px;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     overflow-y: auto;
     max-width: 80%;
     
@@ -92,13 +90,22 @@ textarea.form-control {
     margin: 0px auto;
 }
 
-.testi {
-    
+.note-item {
+    background: white;
+    border: 1px solid #dadada;
+    text-align: center;
+    border-radius: 8px;
+    max-height: 250px;
+    min-height: 250px;
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
 .note-header {
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .todo-background .btn-default {
@@ -118,21 +125,20 @@ textarea.form-control {
 }
 
 .note-body {
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 
-.project-toggle {
-    position: static!important;
-    
+.block-header {
+    background: white;
+    border: 1px solid #dadada;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 0px auto;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 4px;
 }
-
-.btn {
-    left: 0;
-    right: 0;
-    
-}
-
 
 .add-resource-block {
     background: #f9f9f9;
@@ -190,3 +196,17 @@ textarea.form-control {
     text-align: center;
 }
 
+#note-list {
+    overflow-y: auto;
+}
+
+#project-list {
+    margin-top: 20px;
+}
+
+.block-container {
+    min-height: 490px;
+    max-height: 490px;
+    overflow-y: auto;
+    border-radius: 4px;
+}
