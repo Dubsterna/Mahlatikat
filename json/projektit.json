@@ -2,48 +2,60 @@
     "projektit":
     [
         {
+            "id": "1",
             "projekti": "Web-ohjelmointi",
             "kuvaus": "Toteutetaan web-palvelu edustapään tekniikoilla",
             "jasenet": "Pekka, Matti, Maija, Esa, Anni",
-            "paallikko": "Matti"
+            "paallikko": "Matti",
+            "vaiheet":"Käynnistys, Määrittely, Suunnittelu, Toteutus"
         },
         
         {
+            "id": "2",
             "projekti": "Web-projekti 1",
             "kuvaus": "Toteutetaan pelisovellus lapsille rikkaalla sisällöllä",
             "jasenet": "Pekka, Matti, Onni, Mikko, Kaija",
-            "paallikko": "Matti"
+            "paallikko": "Matti",
+            "vaiheet":"Käynnistys, Määrittely, Suunnittelu, Toteutus"
         },
         
         
         {
+            "id": "3",
             "projekti": "Web-projekti 2",
             "kuvaus": "Toteutetaan ensimmäinen web-palvelu kohtuullisilla resursseilla",
             "jasenet": "Teemu, Matti, Mika, Esa, Anni",
-            "paallikko": "Matti"
+            "paallikko": "Matti",
+            "vaiheet":"Käynnistys, Määrittely, Suunnittelu, Toteutus"
         },
         
         {
+            "id": "4",
             "projekti": "Web-palvelun suunnittelu ja määrittely",
             "kuvaus": "Tehdään dokumentaatio, jonka avulla ulkopuolinen tekijä voi toteuttaa web-palvelun",
             "jasenet": "Juho, Matti, Olli, Esa, Anni",
-            "paallikko": "Anni"
+            "paallikko": "Anni",
+            "vaiheet":"Käynnistys, Määrittely, Suunnittelu, Toteutus"
         },
         
         
         {
+            "id": "5",
             "projekti": "Web-ohjelmointi",
             "kuvaus": "Toteutetaan web-palvelu edustapään tekniikoilla",
             "jasenet": "Pekka, Matti, Maija, Esa, Anni",
-            "paallikko": "Maija"
+            "paallikko": "Maija",
+            "vaiheet":"Käynnistys, Määrittely, Suunnittelu, Toteutus"
         },
         
         
         {
+            "id": "6",
             "projekti": "Oma-projekti 1",
             "kuvaus": "Karttapalvelu golf-radoista",
             "jasenet": "Pasi, Kari, Ari, Antti, Tuula",
-            "paallikko": "Ari"
+            "paallikko": "Ari",
+            "vaiheet":"Käynnistys, Määrittely, Suunnittelu, Toteutus"
         }
     ]
 }
