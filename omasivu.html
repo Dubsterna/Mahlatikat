@@ -94,13 +94,7 @@
           <div class="col-sm-4">
               <div class="note-block">
               <h3 class="block-header" data-spy="affix">Viimeisimmät muistiinpanot</h3>
-              <ul class="list-unstyled" id="note-list">
-                    <div class="note-body">
-                    <li class="note-header"><h4>Otsikko</h4></li>
-                    <div class="note-background"><p>Tähän tulee muistiinpanot kuvaus</p></div>
-                    <li><p>Projektinimi Jako</p></li>
-                    </div>
-                    
+              <ul class="list-unstyled" id="note-list">  
                   </ul>
              </div>
           </div>
@@ -108,34 +102,7 @@
               <div class="todo-block">
                 <h3>Sinulle annetut tehtävät</h3>
                     <ul class="list-unstyled" class="col-sm-4" id="todo-list">
-                    <div class="todo-body">
-                        <li class="todo-background">
-                            <h4>Projektinimi</h4>
-                            <h4>Tehtävä 1</h4>
-                        </li>
-                        <li class="todo-button-li"><button type="button" class="btn btn-default" dhref="#" data-toggle="popover" title="Resurssin lisäys" data-content="Kuinka kauan käytit tehtävän Projektisuunnitelma tekemiseen?">Lisää</button></li>
-                    </div>
-                    <div class="todo-body">
-                        <li class="todo-background">
-                            <h4>Projektinimi</h4>
-                            <h4>Tehtävä 1</h4>
-                        </li>
-                        <li class="todo-button-li"><button type="button" class="btn btn-default" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lisää</button></li>
-                    </div>
-                    <div class="todo-body">
-                        <li class="todo-background">
-                            <h4>Projektinimi</h4>
-                            <h4>Tehtävä 1</h4>
-                        </li>
-                        <li class="todo-button-li"><button type="button" class="btn btn-default" href="#" data-toggle="popover" title="Resurssin lisäys" data-content="Kuinka kauan käytit tehtävän Projektisuunnitelma tekemiseen?">Lisää</button></li>
-                    </div>
-                    <div class="todo-body">
-                        <li class="todo-background">
-                        <h4>Projektinimi</h4>
-                        <h4>Tehtävä 1</h4>
-                        </li>
-                        <li class="todo-button-li"><button type="button" class="btn btn-default" href="#" data-toggle="popover" title="Resurssin lisäys" data-content="Kuinka kauan käytit tehtävän Projektisuunnitelma tekemiseen?">Lisää</button></li>
-                    </div>
+                   
                   </ul>
               </div>
               
@@ -144,6 +111,41 @@
         </div>
       </div>
         </div>
+      
+            <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">Lisää resurssi</h3>
+            </div>
+            <div class="modal-body">
+          <div class="add-resource-block">
+                <h4>Kuinka monta tuntia käytit tehtävän projektisuunnitelma tekemiseen?</h4>
+                  <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Resurssi" aria-describedby="basic-addon1">
+                </div>
+                <h4>Valmiusaste %</h4>
+                  <div class="input-group">
+                  <input type="text" class="form-control" placeholder="50%" aria-describedby="basic-addon1">
+                </div>
+                  <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    
+                  </div>
+                </div>
+                  
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-toggle="popover" title="Resurssin lisäys" data-placement="top" data-content="Lisäsit tehtävään projektisuunnitelma 3 tuntia resursseja. Tehtävään projektisuunnitelma on nyt kulutettu 5 tuntia ja sen valmiusaste on 75%." data-dismiss="popover" >Lisää</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -59,12 +59,24 @@ $(document).ready(function(){
     $(this).closest(".panel-group").find(".panel-collapse").collapse('toggle');
 });
 
-    //$('[data-toggle="popover"]').popover();
+    // $('[data-toggle="popover"]').popover();
+    //$('#element').popover('toggle')
 
     $('.block-header').affix({offset: {top: 205} });
 
-    
+     $(document).on('click','[data-toggle="popover"]', function(){
+        $(this).popover('toggle');
+});
 
+$(document).on('click', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+        //the 'is' for buttons that trigger popups
+        //the 'has' for icons within a button that triggers a popup
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+        }
+    });
+});
 
 
 function showProjects(data) {
@@ -168,12 +180,13 @@ function showTodos(data) {
                                         "<h4>"+tehtavat.tehtava+ "</h4>"+
                                     "</li>"+
                                     '<li class="todo-button-li">' +
-                                        '<button type="button" class="btn btn-default" dhref="#" data-toggle="popover" title="Resurssin lisäys" data-content="Kuinka kauan käytit tehtävän Projektisuunnitelma tekemiseen?">'+"Lisää"+
+                                        '<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">'+"Lisää"+
                                         "</button>"+
-                                        "</li>");
+                                        "</li>"+
+                                "</div>");
         
        
     })
 }
 
-
+                

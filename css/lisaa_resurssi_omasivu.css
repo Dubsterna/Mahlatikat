@@ -13,16 +13,16 @@
 .add-resource-block h3  {
     padding-bottom: 20px;
 }
-p  {
+.add-resource-block p  {
     padding-bottom: 10px;
 }
 
-.input-group {
+.add-resource-block .input-group {
     padding-bottom: 20px;
     margin: 0px auto;
 }
 
-button {
+.add-resource-block button {
     float: right;
 }
 
