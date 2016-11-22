@@ -43,22 +43,25 @@ $(document).ready(function(){
     });*/
 
    /* $('span#arrow').on('click', function () {
-        console.log("Vittusaatanaperkelehelvetti");
+        console.log("klikkaus toimii");
     });*/
 
     /*$(document).on('click', '#arrow', function(){
         console.log("Toimii");
         $(document).next(".panelbody").toggle(200);
     });*/
-        
+    
+    // projektien toggle
     $(document).on('click','#arrow', function(){
-    $(this).toggleClass('glyphicon-menu-up');
     $(this).toggleClass('glyphicon-menu-down');
+    $(this).toggleClass('glyphicon-menu-up');
     // toimii kaikilla $(".panel-collapse").collapse('toggle');
     $(this).closest(".panel-group").find(".panel-collapse").collapse('toggle');
 });
 
-    $('[data-toggle="popover"]').popover();
+    //$('[data-toggle="popover"]').popover();
+
+    $('.block-header').affix({offset: {top: 205} });
 
     
 
@@ -122,7 +125,7 @@ function showProjects(data) {
 function showNotes(data) {
     
     console.log(showNotes);
-    $.each(data.muistiinpanot, function(index, muistiinpanot) {
+    /*$.each(data.muistiinpanot, function(index, muistiinpanot) {
         $("#note-list").append("<li>"+
                                     '<a href="#">'+
                                         '<textarea disabled class="form-control" rows="5">'+
@@ -133,13 +136,34 @@ function showNotes(data) {
                                         "</textarea>"+
                                     "</a>"+
                                "</li>");
+    })*/
+    
+    $.each(data.muistiinpanot, function(index, muistiinpanot) {
+        $("#note-list").append('<div class="note-body">'+
+                                    '<li class="note-header">'+
+                                        "<h4>" + muistiinpanot.otsikko + "</h4>"+
+                                    "</li>"+
+                                    '<li class="note-background">'+
+                                        "<p>"+muistiinpanot.kuvaus+ "</p>"+
+                                    "</li>"+
+                                    "<li>"+
+                                        "<p> Projekti: " + muistiinpanot.projekti+"</p>"+
+                                        "<p> Jaetaan: "+muistiinpanot.jaetaan+ "</p>"+
+                                    "</li>"+
+                                "</div>");
     })
+    
+    /*<div class="note-body">
+                    <li class="note-header"><h4>Otsikko</h4></li>
+                    <li class="note-background"><p>Tähän tulee muistiinpanot kuvaus</p></li>
+                    <li><p>Projektinimi Jako</p></li>
+                    </div>*/
 }
 
 function showTodos(data) {
     $.each(data.tehtavat, function(index, tehtavat) {
         $("#todo-list").append('<div class="todo-body">'+
-                                    '<li class="todo-form">'+
+                                    '<li class="todo-background">'+
                                         "<h4>"+tehtavat.projekti+ "</h4>"+
                                         "<h4>"+tehtavat.tehtava+ "</h4>"+
                                     "</li>"+

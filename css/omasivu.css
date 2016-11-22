@@ -28,9 +28,12 @@
     border-radius: 8px;
     max-height: 600px;
     min-height: 600px;
-    
     overflow-y: auto;
     
+}
+
+.affix {
+    top: 20px;
 }
 
 textarea.form-control {
@@ -55,21 +58,49 @@ textarea.form-control {
     
 }
 
-.todo-form {
+.todo-background {
     background: white;
     border: 1px solid #dadada;
-    width: 255.75px;
     max-height: 100px;
     margin: 0px auto;
     border-radius: 4px;
     padding: 10px;
     margin-top: 40px;
     margin-bottom: 0px;
+    overflow-y: auto;
+    max-width: 80%;
+    
+}
+
+.note-background {
+    background: white;
+    border: 1px solid #dadada;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 0px auto;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 5px;
+    overflow-y: auto;
+    max-width: 80%;
+    
+    
+}
+
+.note-background p {
+    margin: 0px auto;
+}
+
+.testi {
     
 }
 
 
-.todo-form .btn-default {
+.note-header {
+    padding-bottom: 10px;
+}
+
+.todo-background .btn-default {
     /*float: right;
     margin-top: -50px;*/
 }
@@ -77,13 +108,18 @@ textarea.form-control {
 .todo-button-li {
     display: inline-block;
     float: right;
-    margin-right: 52px;
+    margin-right: 10%;
     margin-top: 5px;
 }
 
 .todo-body {
     padding-bottom: 40px;
 }
+
+.note-body {
+    margin-top: 40px;
+}
+
 
 .project-toggle {
     position: static!important;
