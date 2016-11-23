@@ -1,11 +1,14 @@
-//function kirjaudu() {
-	//var nimi = document.getElementById("nimi").value
-    //localStorage.setItem(nimi);
-  //  location.href = "omasivu.html";
-//}
 
 $("#myButton").click(function()  {                    
   window.location.href = 'omasivu.html';
+      window.localStorage.setItem("loginname", $("#nimi").val());
+    return false;
+    
+});
+
+
+$("#luo").click(function()  {                    
+  window.location.href = 'rekisterointi.html';
     return false;
     
 });
