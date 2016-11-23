@@ -5,9 +5,9 @@
             "id": "1",
             "projekti": "Web-ohjelmointi",
             "kuvaus": "Toteutetaan web-palvelu edustapään tekniikoilla",
-            "jasenet": "Pekka, Matti, Maija, Esa, Anni",
+            "jasenet": ["Matti", "Pekka", "Maija", "Esa", "Anni"],
             "paallikko": "Matti",
-            "vaiheet":"Käynnistys, Määrittely, Suunnittelu, Toteutus"
+            "vaiheet":["Käynnistys", "Määrittely", "Suunnittelu", "Toteutus"]
         },
         
         {

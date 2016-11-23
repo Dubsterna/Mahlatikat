@@ -1,5 +1,5 @@
 #form {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 h1 {
     text-align: center;
@@ -27,7 +27,20 @@ h2 {
 }
 #h2-email {
     margin-top: 147px;
+    margin-bottom: 65px;
 }
 #buttons {
     margin-top: 30px;
+}
+#email-input {
+    margin-bottom: 0;
+}
+#add-button {
+    margin-bottom: 30px;
+}
+#h2-member {
+    margin-bottom: 200px;
+}
+.panel {
+    height: 200px;
 }

@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/projektisivu.css" rel="stylesheet">
+    <link href="css/rangeslider.css" rel="stylesheet">
 
 
   </head>
@@ -139,15 +140,15 @@
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#vaihe1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">Vaihe 1</a></li>
+    <!--<li role="presentation" class="active"><a href="#vaihe1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">Vaihe 1</a></li>
     <li role="presentation"><a href="#vaihe2" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 2</a></li>
     <li role="presentation"><a href="#vaihe3" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 3</a></li>
-    <li role="presentation"><a href="#vaihe4" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 4</a></li>
+    <li role="presentation"><a href="#vaihe4" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 4</a></li-->
     <li>
 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
   Uusi tehtävä
-</button>
-
+    </button></li>
+              </ul>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -181,9 +182,14 @@
                 </ul>
             </div>
             <input class="form-control" type="number" value="0">
-            <input id="ex6" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="3"/>
-<span id="ex6CurrentSliderValLabel">Current Slider Value: <span id="ex6SliderVal">3</span></span>
-            <div id="task-dropdown" class="dropdown">
+            <input
+                type="range"
+                min="0"                    // default 0
+                max="100"                  // default 100
+                step="1"                   // default 1
+                value="0"                 // default min + (max-min)/2
+                data-orientation="horizontal" // default horizontal>
+                <div id="task-dropdown" class="dropdown">
                 <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Jäsenet
                 <span class="caret"></span>
@@ -219,56 +225,12 @@
         <th class="col-sm-1">Tunnit</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>dsfdsfs</td>
-        <td>sdf</td>
-        <td>sdfsd</td>
-        <td>asdas</td>
-        <td>70%</td>
-        <td></td>
-        <td class="text-right">3</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>        
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
+    <tbody id="project-table">
+      
       <tr>
         <td colspan="5" class="noborders"></td>
         <th class="text-right" scope="row">Yhteensä</th>
-        <td class="text-right">3</td>  
+        <td id="total" class="text-right"></td>  
       </tr>
     </tbody>
 </table></div>
@@ -333,7 +295,7 @@
       <tr>
         <td colspan="5" class="noborders"></td>
         <th class="text-right" scope="row">Yhteensä</th>
-        <td class="text-right">2</td>
+        <td class="total text-right">2</td>
       </tr>
     </tbody>
 </table></div>
@@ -477,5 +439,21 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/projektisivu.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="rangeslider.min.js"></script>
+<script>
+    // Initialize a new plugin instance for all
+    // e.g. $('input[type="range"]') elements.
+    $('input[type="range"]').rangeslider();
+
+    // Destroy all plugin instances created from the
+    // e.g. $('input[type="range"]') elements.
+    $('input[type="range"]').rangeslider('destroy');
+
+    // Update all rangeslider instances for all
+    // e.g. $('input[type="range"]') elements.
+    // Usefull if you changed some attributes e.g. `min` or `max` etc.
+    $('input[type="range"]').rangeslider('update', true);
+</script>
   </body>
 </html>

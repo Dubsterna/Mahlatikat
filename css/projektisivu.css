@@ -70,7 +70,6 @@ td {
 }
 table {
     overflow-y: auto;
-    height: 300px;
 }
 a {
     cursor: pointer;

@@ -14,7 +14,7 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -36,7 +36,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projektit <span class="caret"></span></a>
               <ul class="dropdown-menu" id="project-dropdown">
                 <li><a href="projektisivu.html"></a></li>
-                <li><a href="#">Uusi projekti</a></li>
+                <li><a href="uusiprojekti.html">Uusi projekti</a></li>
                 <li role="separator" class="divider"></li>
               </ul>
             </li>
@@ -45,10 +45,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ilmoitukset <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+ 
               </ul>
             </li> 
             
@@ -70,19 +67,23 @@
             <h2>Projektin nimi</h2>
             <h2>Kuvaus</h2>
             <h2 id="h2-email">Jäsen email</h2>
-            <h2>Jäsen lista</h2>
+            <h2 id="h2-member">Jäsen lista</h2>
         </div>
         <div class="col-xs-6">
             <form>
                 <input class="form-control" type="text">
                 <textarea class="form-control"></textarea>
-                <input class="form-control" type="email">
-                <div class="panel"></div>
+                <input id="email-input" class="form-control" type="email"> <button id="add-button" class="btn btn-default">Lisää</button>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        
+                    </div>
+                </div>
             </form>
         </div>
         <div id="buttons">
-            <button class="btn btn-default">Luo projekti</button>
-            <button class="btn btn-default">Peruuta</button>
+            <button id="saveButton" class="btn btn-default">Luo projekti</button>
+            <button id="cancel" class="btn btn-default">Peruuta</button>
         </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
