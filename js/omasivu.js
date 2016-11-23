@@ -1,6 +1,10 @@
 $(document).ready(function(){
     
+    var name = window.localStorage.getItem("loginname");
+    //console.log(name);
+    $("#kayttaja").text(name);
 
+    
     // get projects
     $.ajax({
         url: "../json/projektit.json",

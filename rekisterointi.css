@@ -3,12 +3,15 @@ body {
     margin:20px
     
 }
+
 .navbar {
     padding-top: 17px;
     margin-bottom: 10px;
     height: 80px;
     background-image: url("nav_kuva4.png");
+    font-family: 'Cabin', sans-serif;
 }
+
 
 .signin {
     border: 1px solid ;
@@ -24,23 +27,46 @@ body {
 }
 
 .teksti {
-    margin-top: 50px
+    margin-top: 20px
 }
 
 .logo {
-    height:40px;
+    height:125px;
     width: inherit;
+    position: relative;
+    margin-top: -12px!important;
+    
 }
 
 h1 {
+    font-family: 'Dosis', sans-serif; 
+    font-size: 50px;
     text-align: center;
 }
 h3 {
+    font-family: 'Dosis', sans-serif; 
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
 }
+
+.teksti {
+    font-family: 'Cabin', sans-serif;
+    font-size: 15px;
+}
+
 
 .painikkeet {
     float: right;
+}
+
+.footer {
+    position:absolute;
+    width: 100%!important;
+    bottom: 0;
+    height: 60px;
+    padding: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: center;
 }
 

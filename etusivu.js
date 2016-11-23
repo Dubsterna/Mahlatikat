@@ -6,6 +6,11 @@ $("#myButton").click(function()  {
     
 });
 
+$("#navrek").click(function()  {                    
+  window.location.href = 'rekisterointi.html';
+    return false;
+    
+});
 
 $("#luo").click(function()  {                    
   window.location.href = 'rekisterointi.html';
