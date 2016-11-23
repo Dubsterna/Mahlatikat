@@ -5,6 +5,7 @@
 //}
 
 $("#myButton").click(function()  {                    
-  
+  window.location.href = 'omasivu.html';
+    return false;
     
 });
