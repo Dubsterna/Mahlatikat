@@ -1,0 +1,28 @@
+.add-resource-block {
+    background: #f9f9f9;
+    border: 1px solid #dadada;
+    text-align: center;
+    border-radius: 8px;
+    max-height: 450px;
+    min-height: 450px;
+    overflow-y: auto;
+    padding: 20px;
+
+}
+
+.add-resource-block h3  {
+    padding-bottom: 20px;
+}
+.add-resource-block p  {
+    padding-bottom: 10px;
+}
+
+.add-resource-block .input-group {
+    padding-bottom: 20px;
+    margin: 0px auto;
+}
+
+.add-resource-block button {
+    float: right;
+}
+

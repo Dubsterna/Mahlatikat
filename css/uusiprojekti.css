@@ -1,0 +1,33 @@
+#form {
+    margin-top: 100px;
+}
+h1 {
+    text-align: center;
+    line-height: 200px;
+}
+input {
+    margin-bottom: 30px;
+    width: 80%;
+}
+textarea {
+    min-height: 150px;
+    max-height: 150px;
+    width: 80%;
+    margin-bottom: 30px;
+}
+#label {
+    text-align: right;
+}
+body {
+    margin: 0;
+}
+h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+#h2-email {
+    margin-top: 147px;
+}
+#buttons {
+    margin-top: 30px;
+}

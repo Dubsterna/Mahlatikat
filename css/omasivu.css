@@ -13,12 +13,11 @@
     border-radius: 8px;
     max-height: 600px;
     min-height: 600px;
-    overflow-y: auto;
     
 }
 
-.project-block h3{
-    padding-bottom: 30px;
+.project-block .block-header{
+    margin-bottom: 0px;
 }
 
 .note-block {
@@ -28,9 +27,12 @@
     border-radius: 8px;
     max-height: 600px;
     min-height: 600px;
+    -webkit-transform: translate3d(0, 0, 0).
     
-    overflow-y: auto;
-    
+}
+
+.affix {
+    top: 20px;
 }
 
 textarea.form-control {
@@ -55,21 +57,58 @@ textarea.form-control {
     
 }
 
-.todo-form {
+.todo-background {
     background: white;
     border: 1px solid #dadada;
-    width: 255.75px;
     max-height: 100px;
     margin: 0px auto;
     border-radius: 4px;
     padding: 10px;
     margin-top: 40px;
     margin-bottom: 0px;
+    overflow-y: auto;
+    max-width: 80%;
     
 }
 
+.note-background {
+    background: white;
+    border: 1px solid #dadada;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 0px auto;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    max-width: 80%;
+    
+    
+}
 
-.todo-form .btn-default {
+.note-background p {
+    margin: 0px auto;
+}
+
+.note-item {
+    background: white;
+    border: 1px solid #dadada;
+    text-align: center;
+    border-radius: 8px;
+    max-height: 250px;
+    min-height: 250px;
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.note-header {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.todo-background .btn-default {
     /*float: right;
     margin-top: -50px;*/
 }
@@ -77,10 +116,97 @@ textarea.form-control {
 .todo-button-li {
     display: inline-block;
     float: right;
-    margin-right: 52px;
+    margin-right: 10%;
     margin-top: 5px;
 }
 
 .todo-body {
     padding-bottom: 40px;
+}
+
+.note-body {
+    margin-top: 0px;
+}
+
+
+.block-header {
+    background: white;
+    border: 1px solid #dadada;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 0px auto;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.add-resource-block {
+    background: #f9f9f9;
+    border: 1px solid #dadada;
+    text-align: center;
+    border-radius: 8px;
+    max-height: 450px;
+    min-height: 450px;
+    overflow-y: auto;
+    padding: 50px;
+
+}
+
+.add-resource-block h3  {
+    padding-bottom: 20px;
+}
+.add-resource-block h4  {
+    padding-bottom: 20px;
+}
+
+.add-resource-block .input-group {
+    padding-bottom: 20px;
+    margin: 0px auto;
+}
+
+.progress {
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 50%;
+}
+
+.add-resource-block button {
+    float: right;
+}
+
+.modal-body {
+    padding: 50px;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+.modal-footer {
+    padding-top: 40px;
+    margin-top: 50px;
+}
+.popover-content {
+    text-align: center;
+}
+
+.popover-title {
+    text-align: center;
+}
+
+#note-list {
+    overflow-y: auto;
+}
+
+#project-list {
+    margin-top: 20px;
+}
+
+.block-container {
+    min-height: 490px;
+    max-height: 490px;
+    overflow-y: auto;
+    border-radius: 4px;
 }

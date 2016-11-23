@@ -72,3 +72,35 @@ table {
     overflow-y: auto;
     height: 300px;
 }
+a {
+    cursor: pointer;
+}
+#h4-task {
+    margin-bottom: 25px;  
+    text-align: right;
+}
+#h4-task-descr {
+    margin-bottom: 55px;
+    text-align: right;
+}
+#module {
+    width: 500px;
+}
+#myModalLabel{
+    text-align: center;
+}
+input {
+    margin-bottom: 20px;
+}
+textarea {
+    margin-bottom: 20px;
+    min-height: 50px;
+    max-height: 50px;
+}
+#h4-task2 {
+    margin-bottom: 35px; 
+    text-align: right
+}
+#task-dropdown {
+    margin-bottom: 20px;
+}
