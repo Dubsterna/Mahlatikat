@@ -138,16 +138,16 @@ function showProjects(data) {
                                 "</li>"); 
         
             // adds projects to the uusi muistiinpano modal
-    $("#task-phase").append("<li>"+projektit.projekti+"</li>");
+    $("#choose-project").append("<li>"+projektit.projekti+"</li>");
         
     })
     
     // adds members to the uusi muistiinpano modal
-    $("#task-member").append("<option>"+data.projektit[0].jasenet[0]+"</option>");
-    $("#task-member").append("<option>"+data.projektit[0].jasenet[1]+"</option>");
-    $("#task-member").append("<option>"+data.projektit[0].jasenet[2]+"</option>");
-    $("#task-member").append("<option>"+data.projektit[0].jasenet[3]+"</option>");
-    $("#task-member").append("<option>"+data.projektit[0].jasenet[4]+"</option>");
+    $("#sharing-memberr").append("<option>"+data.projektit[0].jasenet[0]+"</option>");
+    $("#sharing-member").append("<option>"+data.projektit[0].jasenet[1]+"</option>");
+    $("#sharing-member").append("<option>"+data.projektit[0].jasenet[2]+"</option>");
+    $("#sharing-member").append("<option>"+data.projektit[0].jasenet[3]+"</option>");
+    $("#sharing-member").append("<option>"+data.projektit[0].jasenet[4]+"</option>");
     
 
  

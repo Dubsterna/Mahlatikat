@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="etusivu.html">Reso</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,21 +51,23 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ilmoitukset <span class="caret"></span></a></li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ilmoitukset <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
-              </ul>  
+              </ul>
+            </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <span id="kayttaja"></span> <span class="caret"></span></a></li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <span id="kayttaja"></span> <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="#">Omasivu</a></li>
-                <li><a href="#">Muokkaa profiilia</a></li>
+                <li><a href="omasivu.html">Omasivu</a></li>
+                <li><a href="muokkaatietoja.html">Muokkaa profiilia</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Kirjaudu ulos</a></li>
+                <li><a href="etusivu.html">Kirjaudu ulos</a></li>
             </ul>
+            </li>
             </ul>
           </div>
             
@@ -174,40 +176,40 @@
             <div class="modal-body">
           <form class="form-horizontal">
             <div class="form-group">
-                <label for="asuntotyyppi" class="col-sm-4 control-label" ><h4>Otsikko</h4></label>
+                <label for="otsikko" class="col-sm-4 control-label" ><h4>Otsikko</h4></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="asuntotyyppi">
+                        <input type="text" class="form-control" id="otsikko">
                     </div>
             </div>
             <div class="form-group">
-                <label for="hinta-min" class="col-sm-4 control-label"><h4>Kuvaus</h4></label>
+                <label for="kuvaus" class="col-sm-4 control-label"><h4>Kuvaus</h4></label>
                     <div class="col-sm-8">
                         <textarea class="form-control"></textarea>
                     </div>
                       </div>
                     <div class="form-group">
-                        <label for="hinta-max" class="col-sm-4 control-label"><h4>Valitse projekti</h4></label>
+                        <label for="projekti" class="col-sm-4 control-label"><h4>Valitse projekti</h4></label>
                         <div class="col-sm-8">
                           <div id="task-dropdown" class="dropdown">
                 <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="project-dropdown">
                 Projektit
                 <span class="caret"></span>
                 </button>
-                <ul id="task-phase" class="dropdown-menu" aria-labelledby="dLabel">
+                <ul id="choose-project" class="dropdown-menu" aria-labelledby="dLabel">
                 
                 </ul>
             </div>
                         </div>
                     </div>
                       <div class="form-group">
-                        <label for="sijanti" class="col-sm-4 control-label" ><h4>Jaetaan</h4></label>
+                        <label for="jaetaan" class="col-sm-4 control-label" ><h4>Jaetaan</h4></label>
                         <div class="col-sm-8">
                           <div id="task-dropdown" class="dropdown">
                 <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Valitse jäsen
                 <span class="caret"></span>
                 </button>
-                <ul id="task-member"  class="dropdown-menu" aria-labelledby="dLabel">
+                <ul id="sharing-member"  class="dropdown-menu" aria-labelledby="dLabel">
                 
                 </ul>
             </div>
