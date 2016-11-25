@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     // projects
-    /*
+    
     $.ajax({
         url: "../json/projektit.json",
         cache: false
@@ -11,7 +11,7 @@ $(document).ready(function(){
     }).fail(function(){
             console.log("error");
     });
-    */
+    
     
     // Muistiinpanot
     $.ajax({
@@ -52,23 +52,17 @@ function showProjects(data) {
     $("#task-phase").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].vaiheet[2]+"</li>"+"</a>");
     $("#task-phase").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].vaiheet[3]+"</li>"+"</a>");
 */
-    // adds mambers to the uusi tehtävä dropdown
-    $("#task-member").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].jasenet[0]+"</li>"+"</a>");
-    $("#task-member").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].jasenet[1]+"</li>"+"</a>");
-    $("#task-member").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].jasenet[2]+"</li>"+"</a>");
-    $("#task-member").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].jasenet[3]+"</li>"+"</a>");
-    $("#task-member").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].jasenet[4]+"</li>"+"</a>");
 
-    // adds phase names to table tabs
-   
-    $(".nav-tabs").prepend('<li role="presentation" class="active">'+'<a href="#vaihe4" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">'+data.projektit[0].vaiheet[3]+'</a>'+'</li>');
-    $(".nav-tabs").prepend('<li role="presentation" class="active">'+'<a href="#vaihe3" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">'+data.projektit[0].vaiheet[2]+'</a>'+'</li>');
-    $(".nav-tabs").prepend('<li role="presentation" class="active">'+'<a href="#vaihe2" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">'+data.projektit[0].vaiheet[1]+'</a>'+'</li>');
-    $(".nav-tabs").prepend('<li role="presentation" class="active">'+'<a href="#vaihe1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">'+data.projektit[0].vaiheet[0]+'</a>'+'</li>');
+// LISÄÄ JÄSENEN MUISTIINPANOON //
+    $("#task-member").append("<option>"+data.projektit[0].jasenet[0]+"</option>");
+    $("#task-member").append("<option>"+data.projektit[0].jasenet[1]+"</option>");
+    $("#task-member").append("<option>"+data.projektit[0].jasenet[2]+"</option>");
+    $("#task-member").append("<option>"+data.projektit[0].jasenet[3]+"</option>");
+     $("#task-member").append("<option>"+data.projektit[0].jasenet[4]+"</option>");
+    
     }
    
-// Syötä tietoa muistiinpanoihin //
-
+// SYÖTÄ ITETOA MUISTIINPANOIHIN //
 function showTodos(data) {
     $("#project-table").prepend("<tr>"+
                         '<td>'+data.muistiinpano[0].otsikko+"</td>"+
@@ -85,4 +79,4 @@ function showTodos(data) {
                         '<td>'+data.muistiinpano[2].projekti+"</td>"+
                         '<td>'+data.muistiinpano[2].pvm+"</td>"+
                         "</tr>");
-}
+    }
