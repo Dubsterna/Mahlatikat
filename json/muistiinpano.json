@@ -1,0 +1,31 @@
+{
+    "muistiinpano":
+    [
+        {
+            "projekti": "Web-ohjelmointi",
+            "otsikko": "Tapaaminen 12.12.2016",
+            "kuvaus": "Muista palaveri 12.12.2016 klo 12",
+            "jaetaan": "Maija, Pekka",
+            "pvm": "10.10.2016"
+        },
+        
+        {
+            "projekti": "Web-palvelun suunnittelu ja määrittely",
+            "otsikko": "Use Case -kaavio",
+            "kuvaus": "Muista lisätä Use Case kaavioon uusi toiminto ryhmä-adminille",
+            "jaetaan": "Pekka",
+            "pvm": "19.10.2016"
+        },
+        
+        {
+            "projekti": "Web-ohjelmointi",
+            "otsikko": "Tutustu työkaluun",
+            "kuvaus": "Opettele käyttämään kotona NinjaMock työkalua rautalankamallien tekemiseen",
+            "jaetaan": "Maija, Pekka, Matti, Esa",
+             "pvm": "06.08.2016"
+        }
+        
+       
+        
+    ]
+}

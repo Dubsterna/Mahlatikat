@@ -5,22 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Muistiinpanot</title>
+    <title>Reso - Muistiinpanot</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-       <link href="rekisterointi.css" rel="stylesheet">
+    <link href="css/projektisivu.css" rel="stylesheet">
+    <link href="css/rangeslider.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
   </head>
   <body>
-      
-         <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -30,76 +25,163 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img class="logo" src="logo.jpg" alt="logo"></a>
+          <a class="navbar-brand" href="#">Brand</a>
         </div>
-          <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" class="form-control" id="nimi" placeholder="Käyttäjänimi">
-            <input type="text" class="form-control" placeholder="Salasana">
-        </div>
-        <button type="submit" class="btn btn-default" id="myButton">Kirjaudu</button>
-      </form>
-      </div><!-- /.container-fluid -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="etusivu.html">Etusivu</a></li>
+            <li><a href="omasivu.html">Omasivu</a></li>
+            <li class="active" class="dropdown"><span class="sr-only">(current)</span>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projektit <span class="caret"></span></a>
+              <ul class="dropdown-menu" id="project-dropdown">
+                <li><a href="projektisivu.html"></a></li>
+                <li><a href="uusiprojekti.html">Uusi projekti</a></li>
+                <li role="separator" class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ilmoitukset <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+ 
+              </ul>
+            </li> 
+            
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Käyttäjä <span class="caret"></span></a></li>
+            <ul class="dropdown-menu">
+                <li><a href="#">Omasivu</a></li>
+                <li><a href="#">Muokkaa profiilia</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Kirjaudu ulos</a></li>
+            </ul>
+            </ul>
+            
+      </div>
     </nav>
-
-      <br><br><h1>Muistiinpanot</h1>
-      <h3>Lisää / poista / hallitse muistiinpanoja</h3><br><br>
-      
-
-
-     
-    
-
-     
-      </form>
-      
-    <div class="col-lg-6 col-lg-offset-3">
- <form class="form-horizontal">
-  <div class="form-group">
-    <label for="nimi" class="col-sm-4 control-label">Hae muistiinpanoa</label>
-    <div class="col-sm-8">
-      <input type="text" class="form-control" id="nimi" placeholder="Muistiinpano">
-    </div>
-  </div>
-     
-     <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h3 class="modal-title">Lisää resurssi</h3>
-            </div>
-            <div class="modal-body">
-          <div class="add-resource-block">
-                <h4>Kuinka monta tuntia käytit tehtävän projektisuunnitelma tekemiseen?</h4>
-                  <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Resurssi" aria-describedby="basic-addon1">
-                </div>
-                <h4>Valmiusaste %</h4>
-                  <div class="input-group">
-                  <input type="text" class="form-control" placeholder="50%" aria-describedby="basic-addon1">
-                </div>
-                  <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                    
-                  </div>
-                </div>
-                  
+        
+// YLÄPÄLKIN LOPPU // 
+        
+// Uusi muistiinpano HUOMIO! //
+  <div>
+                <button class="btn btn-default">Uusi muistiinpano</button>
+              </div>
+        
+                 
+    <div class="container">
+          <div class="tabholder">
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-toggle="popover" title="Resurssin lisäys" data-placement="top" data-content="Lisäsit tehtävään projektisuunnitelma 3 tuntia resursseja. Tehtävään projektisuunnitelma on nyt kulutettu 5 tuntia ja sen valmiusaste on 75%." data-dismiss="popover" >Lisää</button>
+       
+        
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <!--<li role="presentation" class="active"><a href="#vaihe1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">Vaihe 1</a></li>
+    <li role="presentation"><a href="#vaihe2" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 2</a></li>
+    <li role="presentation"><a href="#vaihe3" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 3</a></li>
+    <li role="presentation"><a href="#vaihe4" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 4</a></li-->
+    <li>
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+  Uusi muistiinpano
+    </button></li>
+              </ul>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Uusi muistiinpano</h3>
+      </div>
+    
+      <div class="modal-body">
+          <div id="module" class="container">
+        <div class="col-xs-4">
+            <h4 id="h4-task">Otsikko</h4>
+            <h4 id="h4-task-descr">Aihe</h4>
+           
+            <h4 id="h4-task2">Valitse projekti</h4>
+            <h4 id="h4-task2">Lisää jäsen</h4>
+            <h4 id="h4-task2">Tekijät</h4>
+        </div>
+       <div class="col-xs-8">
+            <input class="form-control" type="text">  
+            <textarea class="form-control"></textarea>
+            <div id="task-dropdown" class="dropdown">
+                <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Projektit
+                <span class="caret"></span>
+                </button>
+                <ul id="task-phase" class="dropdown-menu" aria-labelledby="dLabel">
+                
+                </ul>
+            </div>
+           
+                <div id="task-dropdown" class="dropdown">
+                <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Jäsenet
+                <span class="caret"></span>
+                </button>
+                <ul id="task-member"  class="dropdown-menu" aria-labelledby="dLabel">
+                
+                </ul>
+            </div>
+            <input class="form-control" type="text">
         </div>
       </div>
-      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Peruuta</button>
+        <button type="button" class="btn btn-primary">Tallenna</button>
+      </div>
+    </div>
     </div>
   </div>
+</div></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="vaihe1"><table class="table table-bordered">
+        <thead>
+      <tr>
+        <th class="col-sm-3">Muistiinpano</th>
+        <th class="col-sm-3">Projekti</th>
+        <th class="col-sm-2">Päivämäärä</th>
+        </tr>
+    </thead>
+    <tbody id="project-table">
       
+
+    </tbody>
+</table></div>
+  
+
+</div>
+</div>
+      
+      </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/muistiinpano.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="rangeslider.min.js"></script>
+<script>
+    // Initialize a new plugin instance for all
+    // e.g. $('input[type="range"]') elements.
+    $('input[type="range"]').rangeslider();
+
+    // Destroy all plugin instances created from the
+    // e.g. $('input[type="range"]') elements.
+    $('input[type="range"]').rangeslider('destroy');
+
+    // Update all rangeslider instances for all
+    // e.g. $('input[type="range"]') elements.
+    // Usefull if you changed some attributes e.g. `min` or `max` etc.
+    $('input[type="range"]').rangeslider('update', true);
+</script>
   </body>
 </html>
