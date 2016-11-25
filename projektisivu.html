@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Projektisivu proto</title>
+    <title class="title"></title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -66,51 +66,50 @@
           <div class="col-sm-4">
             <div class="notification-block">
                 <h1>Ilmoitustaulu</h1>
-                <ul class="list-unstyled">
-                    <li>
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Äkkiäääää!!<button class="btn btn-link glyphicon glyphicon-pencil pull-right"></h3>
-                            </div>
-                            <div class="panel-body">dfhgfdhhdgf</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="panel panel-success">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Äkkiäääää!!<button class="btn btn-link glyphicon glyphicon-pencil pull-right"></h3>
-                            </div>
-                            <div class="panel-body">dfhgfdhhdgf</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Äkkiäääää!!<button class="btn btn-link glyphicon glyphicon-pencil pull-right"></h3>
-                            </div>
-                            <div class="panel-body">dfhgfdhhdgf</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="panel panel-warning">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Äkkiäääää!!<button class="btn btn-link glyphicon glyphicon-pencil pull-right"></h3>
-                            </div>
-                            <div class="panel-body">dfhgfdhhdgf</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="panel panel-danger">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Äkkiäääää!!<button class="btn btn-link glyphicon glyphicon-pencil pull-right"></span></h3>
-                            </div>
-                            <div class="panel-body">dfhgfdhhdgf</div>
-                        </div>
-                    </li>
+                <ul class="notes list-unstyled">
+                    
+                    
                 </ul>
               </div>
               <div>
-                <button class="btn btn-default">Uusi ilmoitus</button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2">
+  Uusi ilmoitus
+    </button></li>
+              </ul>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Uusi ilmoitus</h3>
+      </div>
+    
+      <div class="modal-body">
+          <h3>Otsikko</h3>
+          <input class="form-control">
+          <h3>Ilmoitus</h3>
+          <textarea id="ilmoitus-text"></textarea>
+          <div id="pohja" class="radio panel-success">
+                <label class="panel-heading"><input type="radio" name="optradio">Vihreä</label>
+          </div>
+          <div id="pohja" class="radio panel-info">
+                <label class="panel-heading"><input type="radio" name="optradio">Sininen</label>
+          </div>
+          <div id="pohja" class="radio panel-warning">
+                <label class="panel-heading"><input type="radio" name="optradio">Keltainen</label>
+          </div>
+          <div id="pohja" class="radio panel-danger">
+                <label class="panel-heading"><input type="radio" name="optradio">Punainen</label>
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Peruuta</button>
+        <button type="button" class="btn btn-primary">Tallenna</button>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
               </div>
         </div>
         <div class="col-sm-4">
@@ -118,20 +117,24 @@
                 <h1></h1>
             </div>
             <div id="project-descr" class="description-block">
+                <div class="descr-title"><h4>Kuvaus</h4></div>
                 
             </div>
-        </div>
-        <div class="col-sm-4">
             <div class="members-block">
                 <div class="panel panel-default" id="member">
                     <div class="panel-heading">
                         <h3 class="panel-title">Jäsenet</h3>
                     </div>
-                    <div class="panel-body">
+                    <div id="member-pane" class="panel-body">
                         <ul class="list-unstyled">
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="member-res panel panel-default">
+                <h4>Jäsenten resurssit</h4>
             </div>
         </div>
           </div>
@@ -140,10 +143,10 @@
 
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <!--<li role="presentation" class="active"><a href="#vaihe1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">Vaihe 1</a></li>
-    <li role="presentation"><a href="#vaihe2" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 2</a></li>
-    <li role="presentation"><a href="#vaihe3" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 3</a></li>
-    <li role="presentation"><a href="#vaihe4" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false">Vaihe 4</a></li-->
+    <li role="presentation" class="active"><a id="vaihe1" href="#vaihe1" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true"></a></li>
+    <li role="presentation"><a id="vaihe2" href="#vaihe2" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false"></a></li>
+    <li role="presentation"><a id="vaihe3" href="#vaihe3" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false"></a></li>
+    <li role="presentation"><a id="vaihe4" href="#vaihe4" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="false"></a></li>
     <li>
 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
   Uusi tehtävä
@@ -166,13 +169,13 @@
             <h4 id="h4-task2">Vaihe</h4>
             <h4 id="h4-task2">Resurssit</h4>
             <h4 id="h4-task2">Valmiusaste</h4>
-            <h4 id="h4-task2">Tekijä</h4>
+            <h4 id="h4-task2-member">Tekijä</h4>
             <h4 id="h4-task2">Tekijät</h4>
         </div>
         <div class="col-xs-8">
             <input class="form-control" type="text">  
             <textarea class="form-control"></textarea>
-            <div id="task-dropdown" class="dropdown">
+            <!--div id="task-dropdown" class="dropdown">
                 <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Vaiheet
                 <span class="caret"></span>
@@ -180,16 +183,13 @@
                 <ul id="task-phase" class="dropdown-menu" aria-labelledby="dLabel">
                 
                 </ul>
-            </div>
+            </div-->
+            <select id="task-phase" class="form-control">
+                
+            </select>
             <input class="form-control" type="number" value="0">
-            <input
-                type="range"
-                min="0"                    // default 0
-                max="100"                  // default 100
-                step="1"                   // default 1
-                value="0"                 // default min + (max-min)/2
-                data-orientation="horizontal" // default horizontal>
-                <div id="task-dropdown" class="dropdown">
+            <input type="range" min="0" max="100" step="1" value="50" data-rangeslider> <output id="js-output"></output>
+                <!--div id="task-dropdown" class="dropdown">
                 <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Jäsenet
                 <span class="caret"></span>
@@ -197,17 +197,29 @@
                 <ul id="task-member"  class="dropdown-menu" aria-labelledby="dLabel">
                 
                 </ul>
+                <button class="btn btn-default">Lisää</button>   
+            </div-->
+                <select id="task-member" class="form-control">
+                
+                    
+                </select>
+                
+                <button id="addButton" class="btn btn-default">Lisää</button>
+                
+            <div id="list-panel" class="panel panel-default">
+                    
             </div>
-            <input class="form-control" type="text">
-        </div>
+          </div>
+              
       </div>
-      <div class="modal-footer">
+            <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Peruuta</button>
         <button type="button" class="btn btn-primary">Tallenna</button>
+      </div>  
+        </div>
       </div>
     </div>
     </div>
-  </div>
 </div></li>
   </ul>
 
@@ -248,51 +260,6 @@
     </thead>
     <tbody>
       <tr>
-        <td>kklöälälöä</td>
-        <td>klölök</td>
-        <td>opåop</td>
-        <td>ayuiyui</td>
-        <td>50%</td>
-        <td></td>
-        <td class="text-right">2</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
         <td colspan="5" class="noborders"></td>
         <th class="text-right" scope="row">Yhteensä</th>
         <td class="total text-right">2</td>
@@ -313,50 +280,6 @@
     </thead>
     <tbody>
       <tr>
-        <td>werwer</td>
-        <td>bvnv</td>
-        <td>jkld</td>
-        <td>gs</td>
-        <td>10%</td>
-        <td class="text-right">1</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
         <td colspan="5" class="noborders"></td>
         <th class="text-right" scope="row">Yhteensä</th>
         <td class="text-right">1</td>
@@ -376,51 +299,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>öpöpöp</td>
-        <td>uiuiuiui</td>
-        <td>wiiii</td>
-        <td>asdas</td>
-        <td>75%</td>
-        <td></td>
-        <td class="text-right">8</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"></td>
-      </tr>
+      
       <tr>
         <td colspan="5" class="noborders"></td>
         <th class="text-right" scope="row">Yhteensä</th>
@@ -439,21 +318,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/projektisivu.js"></script>
-    <script src="jquery.min.js"></script>
-    <script src="rangeslider.min.js"></script>
-<script>
-    // Initialize a new plugin instance for all
-    // e.g. $('input[type="range"]') elements.
-    $('input[type="range"]').rangeslider();
-
-    // Destroy all plugin instances created from the
-    // e.g. $('input[type="range"]') elements.
-    $('input[type="range"]').rangeslider('destroy');
-
-    // Update all rangeslider instances for all
-    // e.g. $('input[type="range"]') elements.
-    // Usefull if you changed some attributes e.g. `min` or `max` etc.
-    $('input[type="range"]').rangeslider('update', true);
-</script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/rangeslider.min.js"></script>
+    <script src="js/rangeslider.js"></script>
   </body>
 </html>

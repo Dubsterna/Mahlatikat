@@ -1,0 +1,32 @@
+{
+     "ilmoitukset":
+    [
+        {
+            "otsikko":"Palaveri",
+            "teksti":"Tänään palaveri klo 15:00 luokassa D426",
+            "tarkeys":"info",
+            "tekija":"Matti"
+        },
+            
+        {
+            "otsikko":"Suunnitelma",
+            "teksti":"Suunnitelma pitää olla valmis ASAP",
+            "tarkeys":"danger",
+            "tekija":"Anni"
+        },
+        
+        {
+            "otsikko":"JSON",
+            "teksti":"Muutama JSON pitäs rustailla",
+            "tarkeys":"warning",
+            "tekija":"Pekka"
+        },
+        
+        {
+            "otsikko":"Pippalot",
+            "teksti":"Muistakaahan välillä vähän ottaa chillisti",
+            "tarkeys":"success",
+            "tekija":"Maija"
+        }   
+    ]
+}
