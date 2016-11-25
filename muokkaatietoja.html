@@ -37,8 +37,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">Etusivu</a></li>
-            <li><a href="#">Omasivu <span class="sr-only">(current)</span></a></li>
+            <li><a href="#" id="etusivu">Etusivu</a></li>
+            <li><a href="#" id="omasivu">Omasivu <span class="sr-only">(current)</span></a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projektit <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -128,7 +128,7 @@
           <div class="col-lg-6 col-lg-offset-3">
       <div class="painikkeet">
     <button type="submit" class="btn btn-default" id="peruuta">Peruuta</button>
-     <button type="submit" class="btn btn-default" id="rekisteroidy">Muokkaa</button>
+     <button type="submit" class="btn btn-default" id="muokkaa">Muokkaa</button>
           </div>
       </div>
           
@@ -138,16 +138,12 @@
      </div>
       </div>
       
-         <footer class="footer">
-      <div class="container">
-       <span class="glyphicon glyphicon-copyright-mark
-" aria-hidden="true"> Mahlatikat</span>
-      </div>
-    </footer>
+
       
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+      <script src="muokkaatietoja.js"></script>
   </body>
 </html>
