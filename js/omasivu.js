@@ -82,19 +82,26 @@ $(document).on('click', function (e) {
     });
 });
 
+ $(document).on('click','#addnewProject', function(){
+       $("#addNewProject").attr("href", "uusiprojekti.html");
 
+});
+
+// show projects
 function showProjects(data) {
     $.each(data.projektit, function(index,projektit){
         console.log(showProjects);
         // add a project item to the project-list
         
-        // tama tapa saa lisattya jsonit
+        // show projects in dropdown
+        $("#project-dropdown").append("<li>"+'<a href="projektisivu.html">'+projektit.projekti+"</a>"+"</li>");
+        
         $("#project-list").append("<li>"+
                                       '<div class="panel-group accordion-holder" id="accordion" role="tablist" aria-multiselectable="true">'+
                                         '<div class="panel panel-default">'+
                                             '<div class="panel-heading" role="tab" id="headingOne" class="accordion">'+
                                                 '<h4 class="panel-title">'+
-                                                '<a class="project-title">'+projektit.projekti+ " " +
+                                                '<a class="project-title" href="projektisivu.html">'+projektit.projekti+ " " +
                                                 "</a>"+
                                                 '<span class="glyphicon glyphicon-menu-down" id="arrow"></span>'+
                                                 "</h4>"+
@@ -110,49 +117,14 @@ function showProjects(data) {
                                     "</div>"+
                                 "</li>"); 
         
-       /*  // create a new list item
-        var listItem = $("<li>");
-        
-        // create a new div for panelGroup
-        var panelGroup = $("<div>").addClass("panel-group accordion-holder").attr("id", "accordion").attr("role", "tablist").attr("aria-multiselectable", "true");
-        
-        // create a new panel
-         var panel = $("<div>").addClass("panel panel-default");
-        
-        // create a new panel heading
-        var panelHeading = $("<div>").addClass("panel-heading").attr("role", "tab").attr("id", "headingOne");
-        
-        // create a new header to project
-        var panelTitle = $("<h4>").addClass("panel-header");
-        
-        // create a new project title link
-        var projectTitleLink = $("<a>").addClass("project-title").text(projektit.projekti);
-       
-        // create a glyphicon arrow with link
-       var glyphicon = $("<a>").addClass("glyphicon glyphicon-menu-down").attr("data-toggle", "collapse").attr("data-parent","#accordion").attr("href", "collpaseOne").attr("aria-expanded","true").attr("aria-controls", "collapseOne");
-        
-       // create a collapse
-       
-       projectListItem.append(accordionHolder, projectDiv, projectHeadingDiv, projectHeader, collapseLink, menuArrow);
-       $("#project-list").append(projectListItem);*/
     })
 }
 
+// show notes
 function showNotes(data) {
     
     console.log(showNotes);
-    /*$.each(data.muistiinpanot, function(index, muistiinpanot) {
-        $("#note-list").append("<li>"+
-                                    '<a href="#">'+
-                                        '<textarea disabled class="form-control" rows="5">'+
-                                            "Otsikko: " +muistiinpanot.otsikko+ "&#10" +
-                                            "Projekti:" +muistiinpanot.projekti+ "&#10" +
-                                            "Kuvaus: " +muistiinpanot.kuvaus+ "&#10" +
-                                            "Jaetaan: "+muistiinpanot.jaetaan+ "&#10" +
-                                        "</textarea>"+
-                                    "</a>"+
-                               "</li>");
-    })*/
+    
     
     $.each(data.muistiinpanot, function(index, muistiinpanot) {
             $("#note-list").append('<div class="note-item">'+
@@ -171,13 +143,9 @@ function showNotes(data) {
                                   "</div");
     })
     
-    /*<div class="note-body">
-                    <li class="note-header"><h4>Otsikko</h4></li>
-                    <li class="note-background"><p>Tähän tulee muistiinpanot kuvaus</p></li>
-                    <li><p>Projektinimi Jako</p></li>
-                    </div>*/
 }
 
+// show todos
 function showTodos(data) {
     $.each(data.tehtavat, function(index, tehtavat) {
         $("#todo-list").append('<div class="todo-body">'+
@@ -195,4 +163,52 @@ function showTodos(data) {
     })
 }
 
+// valmiusaste slider code
+$(function () {
+     var $document = $(document);
+     var selector = '[data-rangeslider]';
+     var $inputRange = $(selector); /** * Example functionality to demonstrate a value feedback * and change the output's value. */
+
+
+     function valueOutput(element) {
+         var value = element.value;
+         var output = element.parentNode.getElementsByTagName('output')[0];
+         output.innerHTML = value;
+     } /** * Initial value output */
+     for (var i = $inputRange.length - 1; i >= 0; i--) {
+         valueOutput($inputRange[i]);
+     } /** * Update value output */
+     $document.on('input', selector, function (e) {
+         valueOutput(e.target);
+     }); /** * Initialize the elements */
+     $inputRange.rangeslider({
+         polyfill: false
+     }); /** * Example functionality to demonstrate programmatic value changes */
+     $document.on('click', '#js-example-change-value button', function (e) {
+         var $inputRange = $('[data-rangeslider]', e.target.parentNode);
+         var value = $('input[type="number"]', e.target.parentNode)[0].value;
+         $inputRange.val(value).change();
+     }); /** * Example functionality to demonstrate programmatic attribute changes */
+     $document.on('click', '#js-example-change-attributes button', function (e) {
+         var $inputRange = $('[data-rangeslider]', e.target.parentNode);
+         var attributes = {
+             min: $('input[name="min"]', e.target.parentNode)[0].value,
+             max: $('input[name="max"]', e.target.parentNode)[0].value,
+             step: $('input[name="step"]', e.target.parentNode)[0].value
+         };
+         $inputRange.attr(attributes).rangeslider('update', true);
+     }); /** * Example functionality to demonstrate destroy functionality */
+     $document.on('click', '#js-example-destroy button[data-behaviour="destroy"]', function (e) {
+         $('input[type="range"]', e.target.parentNode).rangeslider('destroy');
+     }).on('click', '#js-example-destroy button[data-behaviour="initialize"]', function (e) {
+         $('input[type="range"]', e.target.parentNode).rangeslider({
+             polyfill: false
+         });
+     });
+ });
+
+
+ $('input').on('change', function () {
+     console.log($(this).val());
+ });
                 
