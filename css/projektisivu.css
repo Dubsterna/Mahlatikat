@@ -40,7 +40,8 @@ td {
     background: #fff;
     width: 100%!important;
     padding: 0px;
-    overflow-y: auto;
+    overflow-y: hidden;
+    height: 170px;
 }
 td {
     height: 40px;
@@ -62,7 +63,7 @@ td {
     padding: 10px;
     margin-top: 10px;
     overflow-y: auto;
-    height: 125px;
+    height: 135px;
     overflow-y: auto;
 }
 .descr-title {
@@ -128,6 +129,7 @@ output {
 
 .member-res {
     margin-top: 100px;
+    height: 395px;
 }
 h4 {
     text-align: center;

@@ -183,7 +183,7 @@ $("#addButton").click(function() {
         //add to localstorage
         window.localStorage.setItem(key.getTime(), newItem.val());
         //empty newitem
-        newItem.val("");
+        //newItem.val("");
         
         
     });

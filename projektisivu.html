@@ -17,7 +17,7 @@
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
+        
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -28,7 +28,7 @@
           <a class="navbar-brand" href="#">Brand</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="etusivu.html">Etusivu</a></li>
@@ -77,6 +77,7 @@
     </button></li>
               </ul>
 
+        <!-- Uusi Ilmoitus popup -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -84,7 +85,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h3 class="modal-title" id="myModalLabel">Uusi ilmoitus</h3>
       </div>
-    
+        
       <div class="modal-body">
           <h3>Otsikko</h3>
           <input class="form-control">
@@ -126,15 +127,14 @@
                         <h3 class="panel-title">Jäsenet</h3>
                     </div>
                     <div id="member-pane" class="panel-body">
-                        <ul class="list-unstyled">
-                        </ul>
+                      
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-sm-4">
             <div class="member-res panel panel-default">
-                <h4>Jäsenten resurssit</h4>
+                <h1>Jäsenten resurssit</h1>
             </div>
         </div>
           </div>
@@ -153,6 +153,7 @@
     </button></li>
               </ul>
 
+               <!-- Uusi Tehtävä popup -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -167,6 +168,7 @@
             <h4 id="h4-task">Tehtävä</h4>
             <h4 id="h4-task-descr">Kuvaus</h4>
             <h4 id="h4-task2">Vaihe</h4>
+            <h4 id="h4-task2">Suunnitellut resurssit</h4>
             <h4 id="h4-task2">Resurssit</h4>
             <h4 id="h4-task2">Valmiusaste</h4>
             <h4 id="h4-task2-member">Tekijä</h4>
@@ -187,6 +189,7 @@
             <select id="task-phase" class="form-control">
                 
             </select>
+            <input class="form-control" type="number" value="0">
             <input class="form-control" type="number" value="0">
             <input type="range" min="0" max="100" step="1" value="50" data-rangeslider> <output id="js-output"></output>
                 <!--div id="task-dropdown" class="dropdown">
