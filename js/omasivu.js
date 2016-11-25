@@ -87,6 +87,26 @@ $(document).on('click', function (e) {
 
 });
 
+    // esimerkkimuistiinpano ilman ajaxia
+    $(document).on('click','#saveMemo', function(){
+       
+        $("#note-list").prepend('<div class="note-item">'+
+                                    '<div class="note-body">'+
+                                        '<li class="note-header">'+
+                                            "<h4>Esimerkkiotsikko</h4>"+
+                                        "</li>"+
+                                        '<li class="note-background">'+
+                                            "<p>Esimerkkikuvaus</p>"+
+                                        "</li>"+
+                                        "<li>"+
+                                            "<p> Esimerkkiprojekti</p>"+
+                                            "<p> Esimerkkihenkilöt</p>"+
+                                        "</li>"+
+                                    "</div>"+
+                                  "</div");
+});
+
+
 // show projects
 function showProjects(data) {
     $.each(data.projektit, function(index,projektit){
@@ -117,8 +137,22 @@ function showProjects(data) {
                                     "</div>"+
                                 "</li>"); 
         
+            // adds projects to the uusi muistiinpano modal
+    $("#task-phase").append("<li>"+projektit.projekti+"</li>");
+        
     })
+    
+    // adds members to the uusi muistiinpano modal
+    $("#task-member").append("<option>"+data.projektit[0].jasenet[0]+"</option>");
+    $("#task-member").append("<option>"+data.projektit[0].jasenet[1]+"</option>");
+    $("#task-member").append("<option>"+data.projektit[0].jasenet[2]+"</option>");
+    $("#task-member").append("<option>"+data.projektit[0].jasenet[3]+"</option>");
+    $("#task-member").append("<option>"+data.projektit[0].jasenet[4]+"</option>");
+    
+
+ 
 }
+
 
 // show notes
 function showNotes(data) {
