@@ -149,3 +149,12 @@ h4 {
     margin-bottom: 70px;
     text-align: right;
 }
+#member-h2 {
+    text-align: center;
+}
+#totals-table {
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+

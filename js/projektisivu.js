@@ -50,7 +50,7 @@ function showProjects(data) {
     $("#project-descr").append("<p>"+data.projektit[0].kuvaus+"</p>");
     
     // adds members to the members list
-    $("#member-pane").append("<li class='list-unstyled'>"+data.projektit[0].jasenet[0]+"</li>");
+    $("#member-pane").append("<li class='list-unstyled'>"+"<b>"+"Päällikkö: "+"</b>"+data.projektit[0].paallikko+"</li>");
     $("#member-pane").append("<li class='list-unstyled'>"+data.projektit[0].jasenet[1]+"</li>");
     $("#member-pane").append("<li class='list-unstyled'>"+data.projektit[0].jasenet[2]+"</li>");
     $("#member-pane").append("<li class='list-unstyled'>"+data.projektit[0].jasenet[3]+"</li>");
@@ -68,6 +68,27 @@ function showProjects(data) {
     $("#task-member").append("<option>"+data.projektit[0].jasenet[2]+"</option>");
     $("#task-member").append("<option>"+data.projektit[0].jasenet[3]+"</option>");
     $("#task-member").append("<option>"+data.projektit[0].jasenet[4]+"</option>");
+    
+    $(".totals").prepend("<tr>"+
+                        '<td>'+data.projektit[0].jasenet[0]+"</td>"+ 
+                        '<td>'+"3"+"</td>"+
+                        "</tr>"+
+                        "<tr>"+
+                        '<td>'+data.projektit[0].jasenet[1]+"</td>"+
+                        '<td>'+"1"+"</td>"+
+                        "</tr>"+
+                        "<tr>"+
+                        '<td>'+data.projektit[0].jasenet[2]+"</td>"+
+                        '<td>'+"0"+"</td>"+
+                        "</tr>"+
+                        "<tr>"+
+                        '<td>'+data.projektit[0].jasenet[3]+"</td>"+
+                        '<td>'+"2"+"</td>"+
+                        "</tr>"+
+                        "<tr>"+
+                        '<td>'+data.projektit[0].jasenet[4]+"</td>"+
+                        '<td>'+"0"+"</td>"+
+                        "</tr>");
 
     // adds phase names to table tabs
     $("#vaihe1").append(data.projektit[0].vaiheet[0]);
@@ -207,3 +228,4 @@ function addListItem(key, value) {
                        console.log("delete to do item!");
     });
 }
+
