@@ -52,11 +52,11 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ilmoitukset <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+              <ul class="dropdown-menu" id="notifications-dropdown">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -190,31 +190,39 @@
                     <div class="form-group">
                         <label for="projekti" class="col-sm-4 control-label"><h4>Valitse projekti</h4></label>
                         <div class="col-sm-8">
-                          <div id="task-dropdown" class="dropdown">
-                <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="project-dropdown">
-                Projektit
-                <span class="caret"></span>
-                </button>
-                <ul id="choose-project" class="dropdown-menu" aria-labelledby="dLabel">
-                
-                </ul>
+                          <div id="choose-project-dropdown" class="dropdown">
+                              
+                <select id="choose-project" class="form-control" aria-labelledby="dLabel">
+                    
+                </select>
             </div>
                         </div>
                     </div>
                       <div class="form-group">
                         <label for="jaetaan" class="col-sm-4 control-label" ><h4>Jaetaan</h4></label>
                         <div class="col-sm-8">
-                          <div id="task-dropdown" class="dropdown">
-                <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Valitse jäsen
-                <span class="caret"></span>
-                </button>
-                <ul id="sharing-member"  class="dropdown-menu" aria-labelledby="dLabel">
+                          <div id="sharing-dropdown" class="dropdown">
+            
+                <select id="sharing-member" class="form-control" aria-labelledby="dLabel">
                 
-                </ul>
+                </select>
+                <button id="addButton" class="btn btn-default">Lisää</button>
+                
             </div>
                         </div>
+                          
+            
                     </div>
+              
+              <div class="form-group">
+                <label for="kuvaus" class="col-sm-4 control-label"><h4>Kuvaus</h4></label>
+                    <div class="col-sm-8">
+                        <div id="sharing-panel" class="panel panel-default">
+                    
+                </div>
+                    </div>
+                      </div>
+              
                     </form>
         </div>
         <div class="modal-footer">

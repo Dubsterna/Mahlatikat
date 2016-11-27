@@ -3,6 +3,22 @@ $(document).ready(function(){
     var name = window.localStorage.getItem("loginname");
     //console.log(name);
     $("#kayttaja").text(name);
+    
+    
+      
+    if (window.localStorage) {
+       // show items from local storage
+        for (var i=0; i<window.localStorage.length; i++) {
+            // item
+            key = window.localStorage.key(i);
+            // values
+            value = window.localStorage.getItem(key);
+            addSharingMember(key,value);
+
+        }
+    } else {
+        window.alert("Local Storage is not available");
+    }
 
     
     // get projects
@@ -34,6 +50,17 @@ $(document).ready(function(){
     }).done(function(data){
         console.log("Onnistuu");
         showTodos(data);
+    }).fail(function(){
+            console.log("error");
+    });
+    
+    //get notifications
+    $.ajax({
+        url: "../json/ilmoitukset.json",
+        cache: false
+    }).done(function(data){
+        console.log("Onnistuu");
+        showNotifications(data);
     }).fail(function(){
             console.log("error");
     });
@@ -137,13 +164,13 @@ function showProjects(data) {
                                     "</div>"+
                                 "</li>"); 
         
-            // adds projects to the uusi muistiinpano modal
-    $("#choose-project").append("<li>"+projektit.projekti+"</li>");
+    // adds projects to the uusi muistiinpano modal
+    $("#choose-project").append("<option>"+projektit.projekti+"</option>");
         
     })
     
     // adds members to the uusi muistiinpano modal
-    $("#sharing-memberr").append("<option>"+data.projektit[0].jasenet[0]+"</option>");
+    $("#sharing-member").append("<option>"+data.projektit[0].jasenet[0]+"</option>");
     $("#sharing-member").append("<option>"+data.projektit[0].jasenet[1]+"</option>");
     $("#sharing-member").append("<option>"+data.projektit[0].jasenet[2]+"</option>");
     $("#sharing-member").append("<option>"+data.projektit[0].jasenet[3]+"</option>");
@@ -197,7 +224,14 @@ function showTodos(data) {
     })
 }
 
-// valmiusaste slider code
+// show notifications
+function showNotifications(data) {
+    $("#notifications-dropdown").append("<li>"+"Otsikko: "+data.ilmoitukset[0].otsikko+"</li>"+
+                                       "<li>"+"Ilmoitus: "+data.ilmoitukset[0].teksti+"</li>"+
+                                       "<li>"+"Henkilöltä: "+data.ilmoitukset[0].tekija+"</li>");
+}
+
+// valmiusaste slider code from mika
 $(function () {
      var $document = $(document);
      var selector = '[data-rangeslider]';
@@ -246,3 +280,40 @@ $(function () {
      console.log($(this).val());
  });
                 
+// add a user to sharing list
+$("#addButton").click(function() {
+        event.preventDefault();
+        var sharingMember = $("#sharing-member");
+        var key = new Date(); //date info
+        // add to UI
+        addSharingMember(key.getTime(), sharingMember.val());
+        //add to localstorage
+        window.localStorage.setItem(key.getTime(), sharingMember.val());
+    });
+
+// delete a user from sharing list
+    $("#clear").click(function() {
+        //clear localstorage
+      window.localStorage.clear();
+        //clear ui
+        $("#sharing-panel").empty();
+        
+      });
+    
+// show users into sharing member panel
+function addSharingMember(key, value) {
+    $("#sharing-panel").append("<li>"+value+"</li>")
+                    .children("li:last-child")
+                    .attr("dataKey", key);
+    
+// delete image and use it to delete items
+    $("#sharing-panel").children("li:last-child")
+                    .append("    <img id='clear' src='delete.jpg'/>")
+                    .on("click",function() {
+                       console.log("delete to do item!");
+                    //remove from ui
+                        $(this).remove();
+                        //remove from localstorage
+                        window.localStorage.removeItem(key);
+    });
+}

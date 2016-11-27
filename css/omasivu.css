@@ -234,3 +234,19 @@ form h4 {
 textarea.form-control {
     margin: 0px;
 }
+
+#addButton {
+    margin-top: 10px;
+}
+
+#sharing-panel {
+    height: 100px;
+}
+
+#notifications-dropdown{
+    padding: 20px;
+}
+
+#notifications-dropdown li{
+    margin-bottom: 10px;
+}
