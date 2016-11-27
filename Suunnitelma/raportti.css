@@ -17,6 +17,7 @@ h3 {
 p, li {
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 30px;
+    line-height: 1.6;
 }
 
 header {
@@ -66,3 +67,27 @@ a:active {
     background-color: transparent;
     text-decoration: underline;
 	}
+
+#tableOfContents ul {
+        display: table;
+        margin: 0px auto;
+        list-style-type: none;
+        margin-bottom: 30px;
+    }
+
+#tableOfContents ul li{
+        
+        margin-bottom: 30px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+section p {
+    padding-bottom: 20px;
+}
+
+section h3 {
+    margin-top: 80px;
+}
