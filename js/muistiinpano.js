@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    // projects
+    // Projektit
     
     $.ajax({
         url: "../json/projektit.json",
@@ -45,13 +45,7 @@ function showProjects(data) {
     $("#member").append("<li class='list-unstyled'>"+data.projektit[0].jasenet[3]+"</li>");
     $("#member").append("<li class='list-unstyled'>"+data.projektit[0].jasenet[4]+"</li>");
     
-    // adds phases to the uusi tehtävä dropdown
-/*
-    $("#task-phase").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].vaiheet[0]+"</li>"+"</a>");
-    $("#task-phase").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].vaiheet[1]+"</li>"+"</a>");
-    $("#task-phase").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].vaiheet[2]+"</li>"+"</a>");
-    $("#task-phase").append("<a>" + "<li class='list-unstyled'>"+data.projektit[0].vaiheet[3]+"</li>"+"</a>");
-*/
+
 
 // LISÄÄ JÄSENEN MUISTIINPANOON //
     $("#task-member").append("<option>"+data.projektit[0].jasenet[0]+"</option>");
