@@ -23,7 +23,7 @@ $(document).ready(function(){
     
     // get projects
     $.ajax({
-        url: "../json/projektit.json",
+        url: "json/projektit.json",
         cache: false
     }).done(function(data){
         console.log("Onnistuu");
@@ -34,7 +34,7 @@ $(document).ready(function(){
     
     // get notes
     $.ajax({
-        url: "../json/muistiinpanot.json",
+        url: "json/muistiinpanot.json",
         cache: false
     }).done(function(data){
         console.log("Onnistuu");
@@ -45,7 +45,7 @@ $(document).ready(function(){
     
     // get todos
     $.ajax({
-        url: "../json/tehtavat.json",
+        url: "json/tehtavat.json",
         cache: false
     }).done(function(data){
         console.log("Onnistuu");
@@ -56,7 +56,7 @@ $(document).ready(function(){
     
     //get notifications
     $.ajax({
-        url: "../json/ilmoitukset.json",
+        url: "json/ilmoitukset.json",
         cache: false
     }).done(function(data){
         console.log("Onnistuu");

@@ -2,7 +2,7 @@ $(document).ready(function(){
     
     // projects
     $.ajax({
-        url: "../json/projektit.json",
+        url: "json/projektit.json",
         cache: false
     }).done(function(data){
         console.log("Onnistuu");
@@ -13,7 +13,7 @@ $(document).ready(function(){
     
     // tasks
     $.ajax({
-        url: "../json/tehtavat.json",
+        url: "json/tehtavat.json",
         cache: false
     }).done(function(data){
         console.log("Onnistuu");
@@ -24,7 +24,7 @@ $(document).ready(function(){
     
     // notes
     $.ajax({
-        url: "../json/ilmoitukset.json",
+        url: "json/ilmoitukset.json",
         cache: false
     }).done(function(data){
         console.log("Onnistuu");

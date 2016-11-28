@@ -3,7 +3,7 @@ $(document).ready(function(){
     // Projektit
     
     $.ajax({
-        url: "../json/projektit.json",
+        url: "json/projektit.json",
         cache: false
     }).done(function(data){
         console.log("Onnistuu");
@@ -15,7 +15,7 @@ $(document).ready(function(){
     
     // Muistiinpanot
     $.ajax({
-        url: "../json/muistiinpano.json",
+        url: "json/muistiinpano.json",
         cache: false
     }).done(function(data){
         console.log("Onnistuu");
